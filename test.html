@@ -155,9 +155,54 @@
       background-color: #f1f1f1;
     }
 	
-	p {
-  margin: 40px; /* Add 20 pixels of space around each paragraph */
-}
+	<!-- ... (your existing HTML structure) ... -->
+
+<style>
+  /* Other styles remain unchanged */
+
+  /* Adjustments for smaller screens */
+  @media screen and (max-width: 600px) {
+    .top-nav {
+      flex-direction: column; /* Stack items vertically on small screens */
+      padding: 5px 0; /* Reduce top and bottom padding */
+    }
+
+    .top-nav button {
+      margin: 3px; /* Adjust margin for better spacing */
+    }
+
+    .dropdown-profile {
+      position: relative;
+      display: inline-block;
+      margin-top: 5px; /* Add some space between buttons and dropdown */
+    }
+
+    .dropdown-profile-content {
+      display: none;
+      position: absolute;
+      background-color: #87ceeb; /* Sky blue dropdown background */
+      min-width: 120px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-profile:hover .dropdown-profile-content {
+      display: block;
+    }
+
+    .dropdown-profile-content a {
+      color: black;
+      padding: 10px; /* Adjust padding for touch-friendly click */
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-profile-content a:hover {
+      background-color: #f1f1f1;
+    }
+  }
+</style>
+
 	
   </style>
 </head>
@@ -170,26 +215,57 @@
     <button onclick="location.href='earn.html'">EARN</button>
     <button onclick="location.href='invest.html'">INVEST</button>
 	
+	<div class="dropdown-profile">
+      <button>PROFILE &#9660;</button>
+      <div class="dropdown-profile-content">
+        <a href="myaccount.html">My Account</a>
+		<a href="#">Earn More</a>
+        <a href="#">Help & Support</a>
+        <a href="#">Contact Us</a>
+        <a href="#">About Us</a>
+      </div>
+    </div>
+	
   </div>
 
-  <div class="main">
-    <h1>About Us</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis leo quis nisi consequat fringilla. Morbi vitae nisl id nisi tincidunt ullamcorper. Fusce quis nisl ut nisi tincidunt sagittis. Curabitur auctor, nisl id aliquet sagittis, nibh augue lacinia augue, quis aliquam eros mi et elit. Mauris quis nisi quis lectus sollicitudin tincidunt. Sed quis nunc sit amet nisl ullamcorper tincidunt. Cras vitae nisl quis leo tincidunt tincidunt. Quisque quis nisl quis nisi tincidunt tincidunt.</p>
-    <p>Nulla quis nisl quis nisi tincidunt tincidunt. Sed quis nisl quis leo tincidunt tincidunt. Cras quis nisl quis nisi tincidunt tincidunt. Quisque quis nisl quis leo tincidunt tincidunt. Curabitur quis nisl quis nisi tincidunt tincidunt. Sed quis nisl quis leo tincidunt tincidunt. Cras quis nisl quis nisi tincidunt tincidunt. Quisque quis nisl quis leo tincidunt tincidunt.</p>
+  <!-- Your home page content here -->
+  <div class="posts">
+    <div class="post">
+      <h2>Title of Post 1</h2>
+      <p>Description of Post 1</p>
+      <div class="interactions">
+        <button onclick="likePost(1)">Like</button>
+        <button onclick="commentPost(1)">Comment</button>
+        <button onclick="sharePost(1)">Share</button>
+      </div>
+    </div>
+    <div class="post">
+      <h2>Title of Post 2</h2>
+      <p>Description of Post 2</p>
+      <div class="interactions">
+        <button onclick="likePost(2)">Like</button>
+        <button onclick="commentPost(2)">Comment</button>
+        <button onclick="sharePost(2)">Share</button>
+      </div>
+    </div>
+    <!-- Repeat similar structures for more posts -->
   </div>
 
-   <div class="main">
-    <h1>The Team</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis leo quis nisi consequat fringilla. Morbi vitae nisl id nisi tincidunt ullamcorper. Fusce quis nisl ut nisi tincidunt sagittis. Curabitur auctor, nisl id aliquet sagittis, nibh augue lacinia augue, quis aliquam eros mi et elit. Mauris quis nisi quis lectus sollicitudin tincidunt. Sed quis nunc sit amet nisl ullamcorper tincidunt. Cras vitae nisl quis leo tincidunt tincidunt. Quisque quis nisl quis nisi tincidunt tincidunt.</p>
-    <p>Nulla quis nisl quis nisi tincidunt tincidunt. Sed quis nisl quis leo tincidunt tincidunt. Cras quis nisl quis nisi tincidunt tincidunt. Quisque quis nisl quis leo tincidunt tincidunt. Curabitur quis nisl quis nisi tincidunt tincidunt. Sed quis nisl quis leo tincidunt tincidunt. Cras quis nisl quis nisi tincidunt tincidunt. Quisque quis nisl quis leo tincidunt tincidunt.</p>
-  </div>
-  
-  <div class="main">
-    <h1>The Vision</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis leo quis nisi consequat fringilla. Morbi vitae nisl id nisi tincidunt ullamcorper. Fusce quis nisl ut nisi tincidunt sagittis. Curabitur auctor, nisl id aliquet sagittis, nibh augue lacinia augue, quis aliquam eros mi et elit. Mauris quis nisi quis lectus sollicitudin tincidunt. Sed quis nunc sit amet nisl ullamcorper tincidunt. Cras vitae nisl quis leo tincidunt tincidunt. Quisque quis nisl quis nisi tincidunt tincidunt.</p>
-    <p>Nulla quis nisl quis nisi tincidunt tincidunt. Sed quis nisl quis leo tincidunt tincidunt. Cras quis nisl quis nisi tincidunt tincidunt. Quisque quis nisl quis leo tincidunt tincidunt. Curabitur quis nisl quis nisi tincidunt tincidunt. Sed quis nisl quis leo tincidunt tincidunt. Cras quis nisl quis nisi tincidunt tincidunt. Quisque quis nisl quis leo tincidunt tincidunt.</p>
-  </div>
-  
+  <!-- JavaScript for post interactions -->
+  <script>
+    function likePost(postId) {
+      console.log(`Liked Post ${postId}`);
+    }
+
+    function commentPost(postId) {
+      console.log(`Commented on Post ${postId}`);
+    }
+
+    function sharePost(postId) {
+      console.log(`Shared Post ${postId}`);
+    }
+  </script>
+
   <!-- Bottom links -->
   <div class="bottom-links">
     <a href="#">Contact Us</a>

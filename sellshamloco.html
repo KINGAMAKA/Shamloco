@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="emme.css">
+  <link rel="stylesheet" href="mobilelook.css">
+  <script src="jack.js"></script>
+  <title>Buy Tokens</title>
+  <style>
+    /* Reset some default styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8ff; /* Sky blue background */
+      font-family: Arial, sans-serif;
+    }
+
+    /* Container styles */
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Label styles */
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    /* Select element styles */
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    /* Input styles */
+    input[type="number"],
+    input[type="text"] {
+      width: calc(100% - 20px);
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+   /* Button styles */
+button {
+  padding: 10px 20px;
+  background-color: red; /* Change to red */
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #d95b43; /* Darker red on hover */
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Sell ShamLocos</h1>
+    <form id="buy-form">
+      <div class="mb-3">
+        <label for="metalSelect">Select Metal:</label>
+        <select id="metalSelect" required>
+          <option value="GOLD">GOLD</option>
+          <option value="SILVER">COPPER</option>
+          <option value="COPPER">BRONZE</option>
+          <option value="BRONZE">SILVER</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="tokensInput">Number of ShamLocos:</label>
+        <input type="number" class="form-control" id="tokensInput" min="1" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="purposeSelect">Selling To:</label>
+        <select id="purposeSelect" required>
+          <option value="saving">Individual ID Number</option>
+          <option value="reselling">Enterprise ID Number</option>
+        </select>
+      </div>
+	  <div class="mb-3">
+        <label for="tokensInput">ID NUMBER:</label>
+        <input type="number" class="form-control" id="tokensInput" min="1" required>
+      </div>
+
+      
+      <div class="row">
+        <div class="col">
+          <button type="submit" class="btn btn-primary" id="buyButton">sell 98.04</button>
+        </div>
+        <div class="col">
+          <a href="invest.html" class="btn btn-secondary">Cancel</a>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script>

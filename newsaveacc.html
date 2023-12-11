@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saving Portal</title>
+  <style>
+    /* Reset some default styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8ff; /* Sky blue background */
+    }
+
+    /* Welcome message at the top */
+    h1 {
+      text-align: center;
+      color: #87ceeb; /* Sky blue text color */
+      margin-top: 10px; /* Margin for separation */
+    }
+
+    /* Navigation bar at the top */
+    .top-nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #87ceeb; /* Sky blue navigation background */
+      padding: 10px 0;
+    }
+
+    .top-nav button {
+      display: block;
+      background-color: #87ceeb; /* Sky blue button background */
+      border: none;
+      color: #fff; /* White text color */
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    .top-nav button:hover {
+      background-color: #6a5acd; /* Slate blue on hover */
+    }
+
+    /* Dropdown navigation */
+    .dropdown {
+      text-align: right;
+      margin-right: 10px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #87ceeb; /* Sky blue dropdown background */
+      min-width: 120px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    /* Style for form container */
+    .form-container {
+      width: 80%;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Form styles */
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 8px;
+    }
+
+    input[type="text"],
+    textarea {
+      width: calc(100% - 20px);
+      padding: 8px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="submit"] {
+      padding: 10px;
+      background-color: #87ceeb; /* Sky blue button background */
+      border: none;
+      color: #fff; /* White text color */
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #6a5acd; /* Slate blue on hover */
+    }
+
+    /* Style for bottom links */
+    .bottom-links {
+      text-align: center;
+      background-color: #87ceeb; /* Sky blue background for links */
+      padding: 10px 0;
+    }
+
+    .bottom-links a {
+      color: #fff; /* White text color */
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .bottom-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation bar at the top -->
+  <div class="top-nav">
+    <button onclick="location.href='home.html'">HOME</button>
+    <button onclick="location.href='save.html'">SAVE</button>
+    <button onclick="location.href='earn.html'">EARN</button>
+    <button onclick="location.href='invest.html'">INVEST</button>
+  </div>
+
+  <!-- Dropdown navigation -->
+  <div class="dropdown">
+    <button>Menu &#9660;</button>
+    <div class="dropdown-content">
+      <a href="#">My Account</a>
+      <a href="#">About Us</a>
+      <a href="#">Log Out</a>
+    </div>
+  </div>
+
+  <h1>Create New Saving Account</h1>
+
+  <!-- Form for creating a new savings account -->
+  <div class="form-container">
+    <form>
+      <label for="accountName">Name of Account:</label>
+      <input type="text" id="accountName" name="accountName" placeholder="Enter Account Name">
+
+      <label for="amountToSave">Amount to Save:</label>
+      <input type="text" id="amountToSave" name="amountToSave" placeholder="Enter Amount">
+
+      <label for="durationOfSaving">Duration of Saving:</label>
+      <input type="text" id="durationOfSaving" name="durationOfSaving" placeholder="Enter Duration">
+
+      <label for="additionalNotes">Additional Notes:</label>
+      <textarea id="additionalNotes" name="additionalNotes" placeholder="Enter Notes"></textarea>
+    </form>
+	
+	<form action="mysavings.html">
+  <input type="submit" value="Create Account">
+</form>
+	
+  </div>
+
+  <!-- Bottom links -->
+  <div class="bottom-links">
+    <a href="#">Contact Us</a>
+    <a href="#">About Us</a>
+    <a href="#">Testimonies</a>
+    <a href="#">Other Services</a>
+    <a href="#">Register as a Shamloco Trader</a>
+  </div>
+</body>
+</html>

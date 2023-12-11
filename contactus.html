@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Link to the CSS file -->
+  <link rel="stylesheet" href="contactus.css">
+  <title>Contact Us</title>
+</head>
+<body>
+  <!-- Header section -->
+  <header>
+    <!-- Logo image -->
+    <img src="logo.png" alt="SHAMLOCO TRADING" class="logo">
+    <!-- Navigation bar -->
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main section -->
+  <main>
+    <!-- Contact form section -->
+    <section class="contact-form">
+      <h2>Send Us a Message</h2>
+      <p>We would love to hear from you. Please fill out the form below and we will get back to you as soon as possible.</p>
+      <!-- Form element -->
+      <form action="#" method="POST">
+        <!-- Name input -->
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        <!-- Email input -->
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <!-- Address input -->
+        <div class="form-group">
+          <label for="address">Your Address</label>
+          <input type="text" id="address" name="address" placeholder="Enter your address">
+        </div>
+        <!-- Message input -->
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" placeholder="Type your message" rows="5" required></textarea>
+        </div>
+        <!-- Submit button -->
+        <div class="form-group">
+          <button type="submit" class="submit-button">Send</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Contact information section -->
+    <section class="contact-info">
+      <h2>Contact Information</h2>
+      <p>Here are some ways you can reach us:</p>
+      <!-- Company name -->
+      <div class="info-item">
+        <img src="company.png" alt="Company" class="info-icon">
+        <p>SHAMLOCO TRADING</p>
+      </div>
+      <!-- Email -->
+      <div class="info-item">
+        <img src="email.png" alt="Email" class="info-icon">
+        <p>shamloco@example.com</p>
+      </div>
+      <!-- Phone -->
+      <div class="info-item">
+        <img src="phone.png" alt="Phone" class="info-icon">
+        <p>+123-456-7890</p>
+      </div>
+      <!-- Country manager -->
+      <div class="info-item">
+        <img src="manager.png" alt="Manager" class="info-icon">
+        <p>Mr. Shamloco, Country Manager</p>
+      </div>
+      <!-- Head customer relations -->
+      <div class="info-item">
+        <img src="customer.png" alt="Customer" class="info-icon">
+        <p>Ms. Shamloca, Head Customer Relations</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer section -->
+  <footer>
+    <ul>
+      <li><a href="terms.html">Terms of Service</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+    <p>&copy; 2023 SHAMLOCO TRADING. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+```
+
+Here is the sample code for the contactus.css file:
+
+```css
+/* Define some colors for the page */
+:root {
+  --primary-color: #87ceeb; /* Sky blue */
+  --secondary-color: #6a5acd; /* Slate blue */
+  --text-color: #000; /* Black */
+  --background-color: #f0f8ff; /* Light sky blue */
+}
+
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the header section */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+  padding: 20px;
+}
+
+/* Style the logo image */
+.logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Style the navigation bar */
+nav {
+  display: flex;
+}
+
+/* Style the navigation list */
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+/* Style the navigation list items */
+nav ul li {
+  margin: 0 10px;
+}
+
+/* Style the navigation links */
+nav ul li a {
+  font-weight: bold;
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 10px;
+}
+
+/* Style the navigation links on hover */
+nav ul li a:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+/* Style the main section */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px;
+}
+
+/* Style the section headings */
+main h2 {
+  font-size: 24px;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+/* Style the section paragraphs */
+main p {
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+/* Style the contact form section */
+.contact-form {
+  width: 80%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the form element */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style the form group element */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Style the form labels */
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Style the form inputs */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style the form submit button */
+.form-group button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--primary-color);
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Style the form submit button on hover */
+.form-group button[type="submit"]:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Style the contact information section */
+.contact-info {
+  width: 80%;
+  max-width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+
+/* Style the contact information items */
+.info-item {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+/* Style the contact information icons */
+.info-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+/* Style the footer section */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  padding: 20px;
+}
+
+/* Style the footer list */
+footer ul {
+  display: flex;
+  list-style: none;
+}
+
+/* Style the footer list items */
+footer ul li {
+  margin: 0 10px;
+}

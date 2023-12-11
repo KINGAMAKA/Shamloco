@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="emme.css">
+  <link rel="stylesheet" href="mobilelook.css">
+  <script src="jack.js"></script>
+  <title>Mobile App Landing Page</title>
+  <style>
+    /* Reset some default styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8ff; /* Sky blue background */
+    }
+
+    /* Welcome message at the top */
+    h1 {
+      text-align: center;
+      color: #87ceeb; /* Sky blue text color */
+      margin-top: 10px;
+    }
+
+    /* Navigation bar at the top */
+    .top-nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #87ceeb; /* Sky blue navigation background */
+      padding: 10px 0;
+      border-bottom: 2px solid #4682b4; /* Steel blue border */
+    }
+
+    .top-nav button {
+      display: block;
+      background-color: #87ceeb; /* Sky blue button background */
+      border: none;
+      color: #fff; /* White text color */
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    .top-nav button:hover {
+      background-color: #6a5acd; /* Slate blue on hover */
+    }
+
+    /* Custom image style */
+    .custom-image {
+      display: block;
+      margin: 20px auto;
+      max-width: 300px;
+      background-image: url('sky_image.jpg'); /* Replace with sky image */
+      background-size: cover;
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Buy and sell buttons */
+    .buy-sell-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .buy-button {
+      background-color: #6a5acd; /* Blue */
+      color: #fff; /* White text color */
+      border-radius: 5px;
+      padding: 10px 20px;
+      margin: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .sell-button {
+      background-color: #ffc107; /* Yellow */
+      color: #fff; /* White text color */
+      border-radius: 5px;
+      padding: 10px 20px;
+      margin: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* Buy ShamLocos text */
+    .buy-shamlocos {
+      text-align: center;
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    /* Fancy table style */
+    .fancy-table {
+      margin: 20px auto;
+      border-collapse: collapse;
+      width: 80%;
+      border: 1px solid #b8d6b2; /* Light blue border */
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .fancy-table th, .fancy-table td {
+      border: 1px solid #b8d6b2; /* Light blue border */
+      padding: 8px;
+      text-align: left;
+    
+}
+
+.fancy-table th {
+background-color: #c9e0c7; /* Lighter blue background */
+}
+
+/* Bottom links */
+.bottom-links {
+text-align: center;
+background-color: #87ceeb; /* Sky blue background */
+padding: 10px 0;
+border-top: 2px solid #4682b4; /* Steel blue border */
+}
+
+.bottom-links a {
+color: #fff; /* White text color */
+margin: 0 10px;
+text-decoration: none;
+}
+
+.bottom-links a:hover {
+text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+  <div class="top-nav">
+    <button onclick="location.href='home.html'">HOME</button>
+    <button onclick="location.href='save.html'">SAVE</button>
+    <button onclick="location.href='earn.html'">EARN</button>
+    <button onclick="location.href='invest.html'">INVEST</button>
+  </div>
+
+  <div class="custom-image"></div>
+
+  <div class="buy-sell-buttons">
+    <a href="buyshamloco.html" class="btn buy-button">Buy 100.63</a>
+    <a href="sellshamloco.html" class="btn sell-button">Sell 98.04</a>
+  </div>
+
+  <div class="buy-shamlocos">
+    Reach for the Skies with ShamLocos
+  </div>
+
+  <table class="fancy-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Metal</th>
+        <th>Description</th>
+        <th>Price</th>
+      </tr>
+	  <tbody>
+      <tr>
+        <td>1</td>
+        <td>GOLD</td>
+        <td>Description of Gold</td>
+        <td>1GOLD SL - K 100.63</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>COPPER</td>
+        <td>Description of Copper</td>
+        <td>1COPP SL - K50.42</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>BRONZE</td>
+        <td>Description of Bronze</td>
+        <td>1BRZN SL - K 20.13</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>SILVER</td>
+        <td>Description of Silver</td>
+        <td>1SILV SL - K 10.65</td>
+      </tr>
+      <!-- Add more rows for other metals -->
+    </tbody>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+  <div class="bottom-links">
+    <a href="#">Contact Us</a>
+    <a href="#">About Us</a>
+    <a href="#">Testimonies</a>
+    <a href="#">Other Services</a>
+    <a href="#">Register as a Shamloco Trader</a>
+  </div>
+
+</body>
+
+</html>

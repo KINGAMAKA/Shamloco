@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <style>
+    /* Define the color theme using CSS variables */
+    :root {
+      --primary-color: #87ceeb; /* Sky blue */
+      --secondary-color: #6a5acd; /* Slate blue */
+      --text-color: #000; /* Black */
+      --background-color: #f0f8ff; /* Light sky blue */
+    }
+
+    /* Use the color variables throughout the CSS code */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: var(--text-color);
+      background-color: var(--background-color);
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+    }
+
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--secondary-color);
+    }
+
+    /* Style the header section */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: var(--primary-color);
+      padding: 20px;
+    }
+
+    .logo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .nav {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav li {
+      margin: 0 10px;
+    }
+
+    .nav li a {
+      font-weight: bold;
+      padding: 10px;
+    }
+
+    /* Style the main section */
+    .main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 40px;
+    }
+
+    .main h1 {
+      font-size: 36px;
+      color: var(--secondary-color);
+    }
+
+    .main p {
+      font-size: 18px;
+      line-height: 1.5;
+      text-align: justify;
+    }
+
+    /* Style the footer section */
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--primary-color);
+      padding: 20px;
+    }
+
+    .footer p {
+      color: #fff;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header section -->
+  <div class="header">
+    <img src="logo.png" alt="Logo" class="logo">
+    <ul class="nav">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Main section -->
+  <div class="main">
+    <h1>About Us</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis leo quis nisi consequat fringilla. Morbi vitae nisl id nisi tincidunt ullamcorper. Fusce quis nisl ut nisi tincidunt sagittis. Curabitur auctor, nisl id aliquet sagittis, nibh augue lacinia augue, quis aliquam eros mi et elit. Mauris quis nisi quis lectus sollicitudin tincidunt. Sed quis nunc sit amet nisl ullamcorper tincidunt. Cras vitae nisl quis leo tincidunt tincidunt. Quisque quis nisl quis nisi tincidunt tincidunt.</p>
+    <p>Nulla quis nisl quis nisi tincidunt tincidunt. Sed quis nisl quis leo tincidunt tincidunt. Cras quis nisl quis nisi tincidunt tincidunt. Quisque quis nisl quis leo tincidunt tincidunt. Curabitur quis nisl quis nisi tincidunt tincidunt. Sed quis nisl quis leo tincidunt tincidunt. Cras quis nisl quis nisi tincidunt tincidunt. Quisque quis nisl quis leo tincidunt tincidunt.</p>
+  </div>
+
+  <!-- Footer section -->
+  <div class="footer">
+    <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+  </div>
+</body>
+</html>

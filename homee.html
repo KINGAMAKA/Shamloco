@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>savingportal</title>
+  <style>
+    /* Your existing styles... */
+
+    /* Styling for the Forex graph and buttons */
+    .forex-graph-container {
+      width: 50vw; /* Half the viewport width */
+      height: 50vh; /* Half the viewport height */
+      margin: 20px auto; /* Center align */
+    }
+
+    .buy-button {
+      background-color: #1e90ff; /* Blue color */
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    .sell-button {
+      background-color: #ff6347; /* Red color */
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <!-- Your existing content... -->
+
+  <!-- Dropdown navigation -->
+  <div class="dropdown">
+    <button>Menu &#9660;</button>
+    <div class="dropdown-content">
+      <a href="#">My Account</a>
+      <a href="#">About Us</a>
+      <a href="#">Log Out</a>
+    </div>
+  </div>
+
+  <!-- Forex-like graph -->
+  <div class="forex-graph-container">
+    <!-- Placeholder for the graph -->
+    <div id="forexChart" style="width: 100%; height: 100%; background-color: #f0f0f0; /* Light gray */">
+      Graph Placeholder
+    </div>
+    <div>
+      <button class="buy-button" onclick="buy()">BUY</button>
+      <button class="sell-button" onclick="sell()">SELL</button>
+    </div>
+  </div>
+
+  <!-- Bottom links -->
+  <div class="bottom-links">
+    <a href="#">Contact Us</a>
+    <a href="#">About Us</a>
+    <a href="#">Testimonies</a>
+    <a href="#">Other Services</a>
+    <a href="#">Register as a Shamloco Trader</a>
+  </div>
+
+  <!-- JavaScript for the Forex-like graph -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // Mock functions for Buy and Sell buttons (Replace with your logic)
+    function buy() {
+      alert("Buy button clicked");
+    }
+
+    function sell() {
+      alert("Sell button clicked");
+    }
+  </script>
+</body>
+</html>

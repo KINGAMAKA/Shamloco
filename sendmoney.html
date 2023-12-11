@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="emme.css">
+  <link rel="stylesheet" href="mobilelook.css">
+  <script src="jack.js"></script>
+  <title>Send Money</title>
+  <style>
+    /* Reset some default styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8ff; /* Sky blue background */
+      font-family: Arial, sans-serif;
+    }
+
+    /* Container styles */
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Label styles */
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    /* Input styles */
+    input[type="text"],
+    input[type="password"] {
+      width: calc(100% - 20px);
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    /* Button styles */
+    button {
+      padding: 10px 20px;
+      background-color: #87ceeb;
+      border: none;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #6a5acd; /* Slate blue on hover */
+    }
+
+    /* Rest of your styles... */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Send Money</h1>
+
+    <!-- Form for sending money -->
+    <form id="sendMoneyForm" action="#" method="post">
+      <label for="receiverNumber">Enter Receiver's Number:</label>
+      <input type="text" id="receiverNumber" name="receiverNumber" placeholder="Receiver's Number" required>
+
+      <label for="amount">Enter Amount:</label>
+      <input type="text" id="amount" name="amount" placeholder="Amount" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Your Password" required>
+
+      <button type="submit">SEND</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('sendMoneyForm').addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+
+      // Redirect to sent.html upon form submission
+      window.location.href = 'sent.html';
+    });
+  </script>
+  
+</body>
+</html>

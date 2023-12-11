@@ -155,6 +155,24 @@
       background-color: #f1f1f1;
     }
 	
+	/* New styles for the buttons */
+    .top-buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .top-buttons button {
+      background-color: #87ceeb;
+      border: none;
+      color: #fff;
+      padding: 10px 10px;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 0 150px;
+    }
+	
   </style>
 </head>
 
@@ -165,18 +183,12 @@
     <button onclick="location.href='save.html'">SAVE</button>
     <button onclick="location.href='earn.html'">EARN</button>
     <button onclick="location.href='invest.html'">INVEST</button>
-	
-	<div class="dropdown-profile">
-      <button>PROFILE &#9660;</button>
-      <div class="dropdown-profile-content">
-        <a href="myaccount.html">My Account</a>
-		<a href="#">Earn More</a>
-        <a href="#">Help & Support</a>
-        <a href="#">Contact Us</a>
-        <a href="#">About Us</a>
-      </div>
-    </div>
-	
+  </div>
+  
+  <!-- New buttons -->
+  <div class="top-buttons">
+    <button onclick="location.href='explore.html'">EXPLORE</button>
+    <button onclick="location.href='myaccount.html'">MY ACCOUNT</button>
   </div>
 
   <!-- Your home page content here -->

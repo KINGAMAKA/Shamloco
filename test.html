@@ -155,55 +155,6 @@
       background-color: #f1f1f1;
     }
 	
-	<!-- ... (your existing HTML structure) ... -->
-
-<style>
-  /* Other styles remain unchanged */
-
-  /* Adjustments for smaller screens */
-  @media screen and (max-width: 600px) {
-    .top-nav {
-      flex-direction: column; /* Stack items vertically on small screens */
-      padding: 5px 0; /* Reduce top and bottom padding */
-    }
-
-    .top-nav button {
-      margin: 3px; /* Adjust margin for better spacing */
-    }
-
-    .dropdown-profile {
-      position: relative;
-      display: inline-block;
-      margin-top: 5px; /* Add some space between buttons and dropdown */
-    }
-
-    .dropdown-profile-content {
-      display: none;
-      position: absolute;
-      background-color: #87ceeb; /* Sky blue dropdown background */
-      min-width: 120px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-    }
-
-    .dropdown-profile:hover .dropdown-profile-content {
-      display: block;
-    }
-
-    .dropdown-profile-content a {
-      color: black;
-      padding: 10px; /* Adjust padding for touch-friendly click */
-      text-decoration: none;
-      display: block;
-    }
-
-    .dropdown-profile-content a:hover {
-      background-color: #f1f1f1;
-    }
-  }
-</style>
-
-	
   </style>
 </head>
 
@@ -214,6 +165,7 @@
     <button onclick="location.href='save.html'">SAVE</button>
     <button onclick="location.href='earn.html'">EARN</button>
     <button onclick="location.href='invest.html'">INVEST</button>
+	</div>
 	
 	<div class="dropdown-profile">
       <button>PROFILE &#9660;</button>
@@ -225,8 +177,6 @@
         <a href="#">About Us</a>
       </div>
     </div>
-	
-  </div>
 
   <!-- Your home page content here -->
   <div class="posts">

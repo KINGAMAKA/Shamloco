@@ -4,9 +4,73 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign Up</title>
-  <link rel="stylesheet" href="emme.css">
-  <link rel="stylesheet" href="mobilelook.css">
-  <script src="jack.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #87ceeb; /* Sky blue background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Full viewport height */
+    }
+
+    .container {
+      text-align: center;
+      color: #fff; /* White text color */
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    /* Form styles */
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+      width: 300px;
+    }
+
+    label {
+      font-size: 1.2em;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"] {
+      padding: 10px;
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+
+     /* Styled button to match the theme */
+    #submitButton {
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2em;
+      background-color: #6a5acd; /* Slate blue */
+      color: #fff; /* White text color */
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-bottom: 20px;
+    }
+
+    #submitButton:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -32,7 +96,25 @@
         <label for="nrc">NRC:</label>
         <input type="text" id="nrc" name="nrc" required>
       </div>
-      <button type="submit">Submit</button>
+
+
+      <!-- Change the button type to button -->
+      <button type="button" id="submitButton">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    // Get the submit button
+    const submitButton = document.getElementById('submitButton');
+
+    // Add a click event listener to handle form submission
+    submitButton.addEventListener('click', function() {
+      // Redirect to home.html upon button click
+      window.location.href = 'home.html';
+    });
+  </script>
+	  
+      
     </form>
   </div>
 </body>

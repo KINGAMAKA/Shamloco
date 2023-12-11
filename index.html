@@ -4,9 +4,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mobile App Landing Page</title>
-  <link rel="stylesheet" href="emme.css">
-  <link rel="stylesheet" href="mobilelook.css">
-  <script src="jack.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #87ceeb; /* Sky blue background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Full viewport height */
+    }
+
+    .container {
+      text-align: center;
+      color: #fff; /* White text color */
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.5em;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Fancy modern buttons */
+    button {
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2em;
+      margin: 0 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    #loginButton {
+      background-color: #4682b4; /* Steel blue */
+      color: #fff;
+    }
+
+    #signupButton {
+      background-color: #6a5acd; /* Slate blue */
+      color: #fff;
+    }
+
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -14,11 +69,9 @@
     <p>SAVE, EARN, INVEST!</p>
 	
     <div class="buttons">
-      <a href="signin.html"><button button id="loginButton">Login</button>
+      <a href="signin.html"><button id="loginButton">Login</button></a>
       <a href="signup.html"><button id="signupButton">Sign Up</button></a>
     </div>
   </div>
-
-  <script src="script.js"></script>
 </body>
 </html>

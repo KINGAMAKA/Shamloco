@@ -156,7 +156,7 @@
     }
 	
 	/* New styles for the buttons */
-    .top-buttons {
+     .top-buttons {
       display: flex;
       justify-content: center;
       margin-top: 10px;
@@ -166,11 +166,24 @@
       background-color: #87ceeb;
       border: none;
       color: #fff;
-      padding: 10px 10px;
+      padding: 8px 16px; /* Adjusted padding for smaller size */
       text-decoration: none;
-      font-size: 16px;
+      font-size: 14px; /* Slightly reduced font size */
       cursor: pointer;
-      margin: 0 150px;
+      margin: 0 10px;
+      max-width: 150px; /* Limiting maximum width */
+    }
+
+    @media screen and (max-width: 600px) {
+      /* Center align for mobile view */
+      .top-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .top-buttons button {
+        margin-bottom: 10px; /* Adding some space between buttons in mobile view */
+      }
     }
 	
   </style>
@@ -231,8 +244,8 @@
 
   <!-- Bottom links -->
   <div class="bottom-links">
-    <a href="#">Contact Us</a>
-    <a href="#">About Us</a>
+    <a href="contactus.html">Contact Us</a>
+    <a href="aboutus.html">About Us</a>
     <a href="#">Testimonies</a>
     <a href="#">Other Services</a>
     <a href="#">Register as a Shamloco Trader</a>

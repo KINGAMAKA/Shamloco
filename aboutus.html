@@ -1,126 +1,125 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us</title>
+  <link rel="stylesheet" href="emme.css">
+  <link rel="stylesheet" href="mobilelook.css">
+  <script src="jack.js"></script>
+  <title>Mobile App Landing Page</title>
   <style>
-    /* Define the color theme using CSS variables */
-    :root {
-      --primary-color: #87ceeb; /* Sky blue */
-      --secondary-color: #6a5acd; /* Slate blue */
-      --text-color: #000; /* Black */
-      --background-color: #f0f8ff; /* Light sky blue */
-    }
-
-    /* Use the color variables throughout the CSS code */
-    body {
+    /* Reset some default styles */
+    body, html {
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
-      color: var(--text-color);
-      background-color: var(--background-color);
+      background-color: #f0f8ff; /* Sky blue background */
     }
 
-    h1, h2, h3 {
-      margin: 0;
+    /* Welcome message at the top */
+    h1 {
+      text-align: center;
+      color: #87ceeb; /* Sky blue text color */
+      margin-top: 10px; /* Margin for separation */
     }
 
-    a {
-      color: var(--primary-color);
+    /* Navigation bar at the top */
+    .top-nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #87ceeb; /* Sky blue navigation background */
+      padding: 10px 0;
+    }
+
+    .top-nav button {
+      display: block;
+      background-color: #87ceeb; /* Sky blue button background */
+      border: none;
+      color: #fff; /* White text color */
+      padding: 14px 16px;
       text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 5px;
     }
 
-    a:hover {
-      color: var(--secondary-color);
+    .top-nav button:hover {
+      background-color: #6a5acd; /* Slate blue on hover */
     }
 
-    /* Style the header section */
-    .header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background-color: var(--primary-color);
-      padding: 20px;
+    /* Dropdown navigation */
+    .dropdown {
+      text-align: right;
+      margin-right: 10px;
     }
 
-    .logo {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #87ceeb; /* Sky blue dropdown background */
+      min-width: 120px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
     }
 
-    .nav {
-      display: flex;
-      list-style: none;
+    .dropdown:hover .dropdown-content {
+      display: block;
     }
 
-    .nav li {
-      margin: 0 10px;
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
     }
 
-    .nav li a {
-      font-weight: bold;
-      padding: 10px;
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
     }
 
-    /* Style the main section */
-    .main {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 40px;
+    /* Style for images */
+    .about-section img {
+      width: 100%; /* Make the images span the full width */
+      height: auto;
+      max-width: 300px; /* Limit the maximum width */
+      display: block;
+      margin: 10px auto; /* Center the images */
     }
 
-    .main h1 {
-      font-size: 36px;
-      color: var(--secondary-color);
-    }
-
-    .main p {
-      font-size: 18px;
-      line-height: 1.5;
-      text-align: justify;
-    }
-
-    /* Style the footer section */
-    .footer {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: var(--primary-color);
-      padding: 20px;
-    }
-
-    .footer p {
-      color: #fff;
-      font-weight: bold;
-    }
+    /* Existing styles... */
+    /* Add new styles for the post structure */
+    /* ... */
   </style>
 </head>
+
 <body>
-  <!-- Header section -->
-  <div class="header">
-    <img src="logo.png" alt="Logo" class="logo">
-    <ul class="nav">
-      <li><a href="home.html">Home</a></li>
-      <li><a href="aboutus.html">About Us</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+  <!-- Navigation bar at the top -->
+  <div class="top-nav">
+    <button onclick="location.href='home.html'">HOME</button>
+    <button onclick="location.href='save.html'">SAVE</button>
+    <button onclick="location.href='earn.html'">EARN</button>
+    <button onclick="location.href='invest.html'">INVEST</button>
   </div>
+  
+    <!-- Main section -->
+    <main>
+        <section class="about-section">
+            <h2>About Shamloco</h2>
+            <p>Shamloco, established in 2016, was founded with a clear mission: to provide individuals with a platform to save, earn, and invest effectively. Over the years, we have strived to create opportunities that empower our users to manage their finances efficiently, offering avenues for saving their hard-earned money, exploring earning potentials, and making informed investment decisions.</p>
+            <img src="2.png" alt="Image 1"> <!-- Replace "2.png" with your image source -->
 
-  <!-- Main section -->
-  <div class="main">
-    <h1>About Us</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis leo quis nisi consequat fringilla. Morbi vitae nisl id nisi tincidunt ullamcorper. Fusce quis nisl ut nisi tincidunt sagittis. Curabitur auctor, nisl id aliquet sagittis, nibh augue lacinia augue, quis aliquam eros mi et elit. Mauris quis nisi quis lectus sollicitudin tincidunt. Sed quis nunc sit amet nisl ullamcorper tincidunt. Cras vitae nisl quis leo tincidunt tincidunt. Quisque quis nisl quis nisi tincidunt tincidunt.</p>
-    <p>Nulla quis nisl quis nisi tincidunt tincidunt. Sed quis nisl quis leo tincidunt tincidunt. Cras quis nisl quis nisi tincidunt tincidunt. Quisque quis nisl quis leo tincidunt tincidunt. Curabitur quis nisl quis nisi tincidunt tincidunt. Sed quis nisl quis leo tincidunt tincidunt. Cras quis nisl quis nisi tincidunt tincidunt. Quisque quis nisl quis leo tincidunt tincidunt.</p>
-  </div>
+            <p>At Shamloco, our dedication lies in fostering financial literacy and providing accessible tools and resources for individuals seeking to achieve their financial goals. We aim to be a trusted partner on your financial journey, offering reliable services that cater to your needs while ensuring a secure and user-friendly experience.</p>
+            <img src="1.png" alt="Image 2"> <!-- Replace "1.png" with your image source -->
 
-  <!-- Footer section -->
-  <div class="footer">
-    <p>&copy; 2023 Your Company Name. All rights reserved.</p>
-  </div>
+            <p>Through innovative solutions and a commitment to excellence, Shamloco continues to evolve, adapt, and grow alongside our users, shaping a future where financial stability and success are within everyone's reach.</p>
+            <img src="3.png" alt="Image 3"> <!-- Replace "3.png" with your image source -->
+        </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2023 SHAMLOCO TRADING. All rights reserved.</p>
+    </footer>
 </body>
+
 </html>

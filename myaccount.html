@@ -13,11 +13,12 @@
       margin: 0;
       padding: 0;
       background-color: #f0f8ff; /* Sky blue background */
+      color: #000; /* Black text color */
+      text-align: center; /* Center align text */
     }
 
     /* Welcome message at the top */
     h1 {
-      text-align: center;
       color: #87ceeb; /* Sky blue text color */
       margin-top: 10px; /* Margin for separation */
     }
@@ -47,212 +48,55 @@
       background-color: #6a5acd; /* Slate blue on hover */
     }
 
-    /* Dropdown navigation */
-    .dropdown {
-      text-align: right;
-      margin-right: 10px;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #87ceeb; /* Sky blue dropdown background */
-      min-width: 120px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    .dropdown-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #f1f1f1;
-    }
-
-    /* Style for posts */
-    .posts {
-      margin-top: 20px;
+    /* New styles for the buttons */
+    .action-buttons {
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin-top: 20px;
     }
 
-    .post {
-      border: 1px solid #ccc;
-      padding: 10px;
+    .action-buttons button {
+      background-color: #87ceeb;
+      border: none;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 10px 0;
+      max-width: 150px;
+    }
+
+    /* Label for account balance */
+    .balance-label {
+      font-weight: bold;
+      font-size: 18px;
       margin-bottom: 10px;
-      width: 80%; /* Adjust width as needed */
-      background-color: #add8e6; /* Light blue post background */
+      color: black; /* Sky blue text color */
     }
 
-    .interactions {
-      display: flex;
-      justify-content: space-around;
-      width: 100%;
-      margin-top: 10px;
-    }
-
-    .interactions button {
-      flex: 1;
-      margin: 0 5px;
-      background-color: #87ceeb; /* Sky blue button background */
-      border: 1px solid #4682b4; /* Steel blue border */
-      color: #fff; /* White text color */
-    }
-
-    /* Style for bottom links */
+    /* Bottom links */
     .bottom-links {
       text-align: center;
       background-color: #87ceeb; /* Sky blue background for links */
       padding: 10px 0;
+      display: flex;
+      justify-content: center;
     }
 
     .bottom-links a {
-      color: #fff; /* White text color */
-      margin: 0 10px;
+      color: #4682b4; /* Sky blue text color */
+      margin: 10px;
+      font-weight: bold;
       text-decoration: none;
     }
 
     .bottom-links a:hover {
-      text-decoration: underline;
+      color: #6a5acd; /* Slate blue text color on hover */
     }
-	
-	/* Style for the dropdown */
-    .dropdown-profile {
-      position: relative;
-      display: inline-block;
-    }
-
-    .dropdown-profile-content {
-      display: none;
-      position: absolute;
-      background-color: #87ceeb; /* Sky blue dropdown background */
-      min-width: 120px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-    }
-
-    .dropdown-profile:hover .dropdown-profile-content {
-      display: block;
-    }
-
-    .dropdown-profile-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-
-    .dropdown-profile-content a:hover {
-      background-color: #f1f1f1;
-    }
-	
-	/* New styles for the buttons */
-     .top-buttons {
-      display: flex;
-      justify-content: center;
-      margin-top: 10px;
-    }
-
-    .top-buttons button {
-      background-color: #87ceeb;
-      border: none;
-      color: #fff;
-      padding: 8px 16px; /* Adjusted padding for smaller size */
-      text-decoration: none;
-      font-size: 14px; /* Slightly reduced font size */
-      cursor: pointer;
-      margin: 0 10px;
-      max-width: 150px; /* Limiting maximum width */
-    }
-
-    @media screen and (max-width: 600px) {
-      /* Center align for mobile view */
-      .top-buttons {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .top-buttons button {
-        margin-bottom: 10px; /* Adding some space between buttons in mobile view */
-      }
-    }
-	
-	/* Existing styles... */
-    /* Add new styles for the post structure */
-    .post {
-      border: 1px solid #ccc;
-      padding: 10px;
-      margin-bottom: 20px;
-      width: 80%;
-      background-color: #add8e6;
-    }
-
-    .post-header {
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-
-    .post-header img {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      margin-right: 10px;
-    }
-
-    .post-header .profile-info {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .post-header .profile-info span {
-      font-weight: bold;
-    }
-
-    .post-image {
-	  display: block;
-    margin: 0 auto; /* Center the image horizontally */
-      width: 300px; /* Adjust the image size */
-      height: auto;
-      margin-bottom: 10px;
-    }
-
-    .post-content {
-      margin-bottom: 10px;
-    }
-
-    .post-actions {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .post-actions button {
-      flex: 1;
-      margin: 0 5px;
-      background-color: #87ceeb;
-      border: 1px solid #4682b4;
-      color: #fff;
-    }
-	
-	.comment-section textarea {
-    width: 100%; /* Make the textarea span the full width */
-    box-sizing: border-box; /* Include padding and border in the width */
-    padding: 10px; /* Add padding for better appearance */
-    margin-bottom: 10px; /* Add some space between textarea and button */
-  }
-	
   </style>
 </head>
-
 <body>
   <!-- Navigation bar at the top -->
   <div class="top-nav">
@@ -262,26 +106,13 @@
     <button onclick="location.href='invest.html'">INVEST</button>
   </div>
 
+  <!-- Label for account balance -->
+  <div class="balance-label">ACCOUNT BALANCE K2,214.67</div>
 
-  <!-- Navigation bar at the top -->
-  <div class="top-nav">
-    <div class="top-nav-left">
-      <label class="money-label" style="font-weight: bold; font-size: 20px;">Account Balance: 100</label>
-    </div>
-    <div class="top-nav-right">
-      <div class="profile-photo"></div>
-    </div>
-  </div>
-
-   <div class="action-buttons">
-    <!-- Change the onclick attribute to navigate to sendmoney.html -->
-	
-	
-    
-	<button onclick="location.href='mysavings.html'">MY SAVING ACCOUNTS</button>
-	
-	
-	<button onclick="location.href='sendmoney.html'">SEND MONEY</button>
+  <!-- Action buttons -->
+  <div class="action-buttons">
+    <button onclick="location.href='mysavings.html'">MY SAVING ACCOUNTS</button>
+    <button onclick="location.href='sendmoney.html'">SEND MONEY</button>
     <button onclick="location.href='deposit.html'">DEPOSIT</button>
     <button onclick="location.href='withdraw.html'">WITHDRAW</button>
   </div>
@@ -295,25 +126,5 @@
     <a href="#">Other Services</a>
     <a href="#">Register as a Shamloco Trader</a>
   </div>
-  
-  <style>
-      .bottom-links {
-        display: flex;
-        justify-content: center;
-      }
-	  /* Added style for the links */
-      .bottom-links a {
-        text-decoration: none; /* Remove underline */
-        color: #4682b4; /* Sky blue text color */
-        margin: 10px; /* Add some space around the links */
-        font-weight: bold; /* Make the text more visible */
-      }
-
-      /* Added style for the links on hover */
-      .bottom-links a:hover {
-        color: #6a5acd; /* Slate blue text color on hover */
-      }
-    </style>
-  
 </body>
 </html>

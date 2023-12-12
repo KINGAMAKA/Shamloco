@@ -3,123 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="emme.css">
-  <link rel="stylesheet" href="mobilelook.css">
-  <script src="jack.js"></script>
   <title>Mobile App Landing Page</title>
   <style>
-    /* Reset some default styles */
-    body, html {
+    body {
       margin: 0;
       padding: 0;
-      background-color: #f0f8ff; /* Sky blue background */
-    }
-
-    /* Welcome message at the top */
-    h1 {
-      text-align: center;
-      color: #87ceeb; /* Sky blue text color */
-      margin-top: 10px; /* Margin for separation */
-    }
-
-    /* Navigation bar at the top */
-    .top-nav {
+      font-family: Arial, sans-serif;
+      background-color: #87ceeb; /* Sky blue background */
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       align-items: center;
-      background-color: #87ceeb; /* Sky blue navigation background */
-      padding: 10px 0;
+      height: 100vh; /* Full viewport height */
     }
 
-    .top-nav button {
-      display: block;
-      background-color: #87ceeb; /* Sky blue button background */
-      border: none;
+    .container {
+      text-align: center;
       color: #fff; /* White text color */
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 16px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.5em;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Fancy modern buttons */
+    button {
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2em;
+      margin: 0 10px;
       cursor: pointer;
-      margin: 5px;
+      transition: all 0.3s ease;
     }
 
-    .top-nav button:hover {
-      background-color: #6a5acd; /* Slate blue on hover */
+    #loginButton {
+      background-color: #4682b4; /* Steel blue */
+      color: #fff;
     }
 
-    /* Dropdown navigation */
-    .dropdown {
-      text-align: right;
-      margin-right: 10px;
+    #signupButton {
+      background-color: #6a5acd; /* Slate blue */
+      color: #fff;
     }
 
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #87ceeb; /* Sky blue dropdown background */
-      min-width: 120px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    .dropdown-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #f1f1f1;
-    }
-
-    /* Style for images */
-    .about-section img {
-      width: 100%; /* Make the images span the full width */
+    /* Styles for the logo image */
+    .logo-image {
+      width: 200px; /* Adjust the width as needed */
       height: auto;
-      max-width: 300px; /* Limit the maximum width */
-      display: block;
-      margin: 10px auto; /* Center the images */
     }
-
-    /* Existing styles... */
-    /* Add new styles for the post structure */
-    /* ... */
   </style>
 </head>
-
 <body>
-  <!-- Navigation bar at the top -->
-  <div class="top-nav">
-    <button onclick="location.href='home.html'">HOME</button>
-    <button onclick="location.href='save.html'">SAVE</button>
-    <button onclick="location.href='earn.html'">EARN</button>
-    <button onclick="location.href='invest.html'">INVEST</button>
+  <div class="container">
+     <!-- Image added here -->
+    <img src="shamlogo.png" alt="ShamLoco Logo" class="logo-image">
+    <div class="buttons">
+      <a href="signin.html"><button id="loginButton">Login</button></a>
+      <a href="signup.html"><button id="signupButton">Sign Up</button></a>
+    </div>
   </div>
-  
-    <!-- Main section -->
-    <main>
-        <section class="about-section">
-            <h2>About Shamloco</h2>
-            <p>Shamloco, established in 2016, was founded with a clear mission: to provide individuals with a platform to save, earn, and invest effectively. Over the years, we have strived to create opportunities that empower our users to manage their finances efficiently, offering avenues for saving their hard-earned money, exploring earning potentials, and making informed investment decisions.</p>
-            <img src="2.png" alt="Image 1"> <!-- Replace "2.png" with your image source -->
-
-            <p>At Shamloco, our dedication lies in fostering financial literacy and providing accessible tools and resources for individuals seeking to achieve their financial goals. We aim to be a trusted partner on your financial journey, offering reliable services that cater to your needs while ensuring a secure and user-friendly experience.</p>
-            <img src="1.png" alt="Image 2"> <!-- Replace "1.png" with your image source -->
-
-            <p>Through innovative solutions and a commitment to excellence, Shamloco continues to evolve, adapt, and grow alongside our users, shaping a future where financial stability and success are within everyone's reach.</p>
-            <img src="3.png" alt="Image 3"> <!-- Replace "3.png" with your image source -->
-        </section>
-    </main>
-
-    <!-- Footer section -->
-    <footer>
-        <p>&copy; 2023 SHAMLOCO TRADING. All rights reserved.</p>
-    </footer>
 </body>
-
 </html>

@@ -155,25 +155,101 @@
       background-color: #f1f1f1;
     }
 	
-	.post-job-form input[type="submit"] {
-      background-color: #87ceeb; /* Sky blue button background */
+	/* New styles for the buttons */
+     .top-buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .top-buttons button {
+      background-color: #87ceeb;
       border: none;
-      color: #fff; /* White text color */
-      padding: 12px 20px; /* Adjusted padding */
+      color: #fff;
+      padding: 8px 16px; /* Adjusted padding for smaller size */
       text-decoration: none;
-      font-size: 16px;
+      font-size: 14px; /* Slightly reduced font size */
       cursor: pointer;
-      transition: background-color 0.3s ease; /* Smooth transition */
+      margin: 0 10px;
+      max-width: 150px; /* Limiting maximum width */
+    }
+
+    @media screen and (max-width: 600px) {
+      /* Center align for mobile view */
+      .top-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .top-buttons button {
+        margin-bottom: 10px; /* Adding some space between buttons in mobile view */
+      }
     }
 	
-	 .post-job-section h2,
-    .post-job-form {
-      text-align: center;
-}
+	/* Existing styles... */
+    /* Add new styles for the post structure */
+    .post {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 20px;
+      width: 80%;
+      background-color: #add8e6;
+    }
 
-.post-job-form input[type="submit"]:hover {
-      background-color: #6a5acd; /* Slate blue on hover */
-    }	  
+    .post-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .post-header img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .post-header .profile-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .post-header .profile-info span {
+      font-weight: bold;
+    }
+
+    .post-image {
+	  display: block;
+    margin: 0 auto; /* Center the image horizontally */
+      width: 300px; /* Adjust the image size */
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .post-content {
+      margin-bottom: 10px;
+    }
+
+    .post-actions {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .post-actions button {
+      flex: 1;
+      margin: 0 5px;
+      background-color: #87ceeb;
+      border: 1px solid #4682b4;
+      color: #fff;
+    }
+	
+	.comment-section textarea {
+    width: 100%; /* Make the textarea span the full width */
+    box-sizing: border-box; /* Include padding and border in the width */
+    padding: 10px; /* Add padding for better appearance */
+    margin-bottom: 10px; /* Add some space between textarea and button */
+  }
+	
   </style>
 </head>
 
@@ -184,63 +260,139 @@
     <button onclick="location.href='save.html'">SAVE</button>
     <button onclick="location.href='earn.html'">EARN</button>
     <button onclick="location.href='invest.html'">INVEST</button>
-	
-	
+  </div>
+  
+  <!-- New buttons -->
+  <div class="top-buttons">
+        <button onclick="location.href='myaccount.html'">Post Job</button>
   </div>
 
- <!-- Post New Job section -->
-<div class="post-job-section">
-  <h2>Use The ShamLoco Platform To Earn Money By Finding Jobs Suitable To You</h2>
-  <form action="postjob.html"> <!-- Add the action attribute with the desired URL -->
-    <div class="post-job-form">
-      <input type="submit" value="Post Job">
+ <!-- Your home page content here -->
+  <div class="posts">
+    <div class="post">
+      <div class="post-header">
+        <img src="shamlogo.png" alt="Profile Picture">
+        <div class="profile-info">
+          <span>Andrew Mwila</span>
+          <span>12/03/2024</span>
+        </div>
+      </div>
+      <div class="post-content">
+        <p>Digital Marketing Specialist: Responsible for developing, implementing, and managing marketing campaigns that promote a company's products or services online. Tasks may include creating content, managing social media accounts, analyzing data, and optimizing online advertising strategies.</p>
+      </div>
+      <img class="post-image" src="onetime.jpg" alt="Uploaded Image">
+     <div class="post-actions">
+      <button onclick="location.href='acceptjob.html'">Accept Job</button>
+      <button onclick="sharePost(1)">Share Job</button>
     </div>
-  </form>
-</div>
-
-
-  <!-- Job posts -->
-  <!-- Job posts -->
-<div class="posts">
-  <!-- Filler job posts (replace with actual job posts) -->
-  <div class="post">
-    <a href="job1.html"> <!-- Add a URL for the job -->
-      <h2>ACCOUNTANT</h2>
-      <p>Need to work on auditing, management systems etc</p>
-    </a>
-    <div class="interactions">
-      <!-- Buttons for job interactions -->
-      <!-- ... -->
+         
     </div>
   </div>
-
-  <div class="post">
-    <a href="job2.html"> <!-- Add a URL for the job -->
-      <h2>Grass Cutting</h2>
-      <p>I need someone to cut my grass, location Thornpark</p>
-    </a>
-    <div class="interactions">
-      <!-- Buttons for job interactions -->
-      <!-- ... -->
+  
+  <!-- Your home page content here -->
+  <div class="posts">
+    <div class="post">
+      <div class="post-header">
+        <img src="shamlogo.png" alt="Profile Picture">
+        <div class="profile-info">
+          <span>Micheal Lombe</span>
+          <span>12/03/2024</span>
+        </div>
+      </div>
+      <div class="post-content">
+        <p>Environmental Engineer: Works on projects related to environmental protection, remediation, and sustainability. Tasks include assessing environmental impact, designing solutions for waste disposal, conducting research, and ensuring compliance with regulations. </p>
+      </div>
+      <img class="post-image" src="twotime.png" alt="Uploaded Image">
+     <div class="post-actions">
+      <button onclick="location.href='acceptjob.html'">Accept Job</button>
+      <button onclick="sharePost(1)">Share Job</button>
+    </div>
+         
     </div>
   </div>
-
-  <div class="post">
-    <a href="job3.html"> <!-- Add a URL for the job -->
-      <h2>Driver/Courier</h2>
-      <p>I have a parkage that needs to be delivered</p>
-    </a>
-    <div class="interactions">
-      <!-- Buttons for job interactions -->
-      <!-- ... -->
+  
+  <!-- Your home page content here -->
+  <div class="posts">
+    <div class="post">
+      <div class="post-header">
+        <img src="shamlogo.png" alt="Profile Picture">
+        <div class="profile-info">
+          <span>Kingsley Mwenya</span>
+          <span>12/03/2024</span>
+        </div>
+      </div>
+      <div class="post-content">
+        <p>Clinical Psychologist: Provides mental health assessments, therapy, and counseling services to individuals or groups. They diagnose and treat various psychological disorders, develop treatment plans, and often work in private practice, hospitals, or mental health clinics.</p>
+      </div>
+      <img class="post-image" src="threetime.jpg" alt="Uploaded Image">
+     <div class="post-actions">
+      <button onclick="location.href='acceptjob.html'">Accept Job</button>
+      <button onclick="sharePost(1)">Share Job</button>
+    </div>
+         
     </div>
   </div>
-</div>
+  
+  <!-- Your home page content here -->
+  <div class="posts">
+    <div class="post">
+      <div class="post-header">
+        <img src="shamlogo.png" alt="Profile Picture">
+        <div class="profile-info">
+          <span>Carol Siame</span>
+          <span>12/03/2024</span>
+        </div>
+      </div>
+      <div class="post-content">
+        <p>UX/UI Designer: Focuses on enhancing user satisfaction by improving the usability, accessibility, and overall experience of digital products. Responsibilities include creating wireframes, conducting user research, designing interfaces, and collaborating with developers.</p>
+      </div>
+      <img class="post-image" src="fourtime.jpg" alt="Uploaded Image">
+     <div class="post-actions">
+      <button onclick="location.href='acceptjob.html'">Accept Job</button>
+      <button onclick="sharePost(1)">Share Job</button>
+    </div>
+         
+    </div>
+  </div>
+  
+ 
+
+  <!-- JavaScript for post interactions -->
+  <script>
+    let likesCount = [0, 0]; // Counter for likes
+
+    function likePost(postId) {
+      likesCount[postId - 1]++;
+      const likeElement = document.querySelector(`.post:nth-child(${postId}) .like-count`);
+      likeElement.textContent = `${likesCount[postId - 1]} Likes`;
+    }
+
+    function commentPost(postId) {
+      const commentSection = document.querySelector(`.post:nth-child(${postId}) .comment-section`);
+      commentSection.style.display = "block";
+    }
+
+    function sharePost(postId) {
+      const postLink = window.location.href + `#post-${postId}`;
+      navigator.clipboard.writeText(postLink);
+      alert(`Post link copied to clipboard: ${postLink}`);
+    }
+
+    function postComment(postId) {
+      const commentArea = document.getElementById(`commentArea${postId}`);
+      const commentText = commentArea.value;
+      const commentSection = document.querySelector(`.post:nth-child(${postId}) .comments`);
+      const commentElement = document.createElement("div");
+      commentElement.textContent = commentText;
+      commentSection.appendChild(commentElement);
+      commentArea.value = "";
+    }
+  </script>
 
   <!-- Bottom links -->
   <div class="bottom-links">
-    <a href="#">Contact Us</a>
-    <a href="#">About Us</a>
+    <a href="contactus.html">Contact Us</a>
+    <a href="aboutus.html">About Us</a>
     <a href="#">Testimonies</a>
     <a href="#">Other Services</a>
     <a href="#">Register as a Shamloco Trader</a>

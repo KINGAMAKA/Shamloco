@@ -135,6 +135,41 @@ text-decoration: none;
 .bottom-links a:hover {
 text-decoration: none;
 }
+
+/* Infographics section */
+    .infographics {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .infographic {
+      text-align: center;
+      width: 45%;
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: #c9e0c7; /* Lighter blue background */
+    }
+
+    .infographic img {
+      width: 200px; /* Adjust image size */
+      height: 200px;
+      margin-bottom: 10px;
+    }
+
+    .infographic h3 {
+      margin-bottom: 5px;
+    }
+
+    .infographic p {
+      font-size: 14px;
+      color: #333;
+    }
+
 </style>
 </head>
 
@@ -196,6 +231,39 @@ text-decoration: none;
     <tbody>
     </tbody>
   </table>
+  
+  <!-- Infographics for Gold, Copper, Bronze, Silver -->
+  <div class="infographics">
+    <div class="infographic">
+      <img src="gold.png" alt="Gold Image">
+      <h3>GOLD</h3>
+      <p>Description of Gold</p>
+      <p>Price: 1GOLD SL - K 100.63</p>
+    </div>
+
+    <div class="infographic">
+      <img src="copper.png" alt="Copper Image">
+      <h3>COPPER</h3>
+      <p>Description of Copper</p>
+      <p>Price: 1COPP SL - K50.42</p>
+    </div>
+
+    <div class="infographic">
+      <img src="bronze.png" alt="Bronze Image">
+      <h3>BRONZE</h3>
+      <p>Description of Bronze</p>
+      <p>Price: 1BRZN SL - K 20.13</p>
+    </div>
+
+    <div class="infographic">
+      <img src="silver.png" alt="Silver Image">
+      <h3>SILVER</h3>
+      <p>Description of Silver</p>
+      <p>Price: 1SILV SL - K 10.65</p>
+    </div>
+  </div>
+  
+  
 
   <div class="bottom-links">
     <a href="#">Contact Us</a>

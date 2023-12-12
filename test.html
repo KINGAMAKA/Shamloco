@@ -3,10 +3,190 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Social Media Template</title>
-  <!-- Styles -->
+  <link rel="stylesheet" href="emme.css">
+  <link rel="stylesheet" href="mobilelook.css">
+  <script src="jack.js"></script>
+  <title>Mobile App Landing Page</title>
   <style>
-    /* Existing styles... */
+    /* Reset some default styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8ff; /* Sky blue background */
+    }
+
+    /* Welcome message at the top */
+    h1 {
+      text-align: center;
+      color: #87ceeb; /* Sky blue text color */
+      margin-top: 10px; /* Margin for separation */
+    }
+
+    /* Navigation bar at the top */
+    .top-nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #87ceeb; /* Sky blue navigation background */
+      padding: 10px 0;
+    }
+
+    .top-nav button {
+      display: block;
+      background-color: #87ceeb; /* Sky blue button background */
+      border: none;
+      color: #fff; /* White text color */
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    .top-nav button:hover {
+      background-color: #6a5acd; /* Slate blue on hover */
+    }
+
+    /* Dropdown navigation */
+    .dropdown {
+      text-align: right;
+      margin-right: 10px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #87ceeb; /* Sky blue dropdown background */
+      min-width: 120px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    /* Style for posts */
+    .posts {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .post {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+      width: 80%; /* Adjust width as needed */
+      background-color: #add8e6; /* Light blue post background */
+    }
+
+    .interactions {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .interactions button {
+      flex: 1;
+      margin: 0 5px;
+      background-color: #87ceeb; /* Sky blue button background */
+      border: 1px solid #4682b4; /* Steel blue border */
+      color: #fff; /* White text color */
+    }
+
+    /* Style for bottom links */
+    .bottom-links {
+      text-align: center;
+      background-color: #87ceeb; /* Sky blue background for links */
+      padding: 10px 0;
+    }
+
+    .bottom-links a {
+      color: #fff; /* White text color */
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .bottom-links a:hover {
+      text-decoration: underline;
+    }
+	
+	/* Style for the dropdown */
+    .dropdown-profile {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-profile-content {
+      display: none;
+      position: absolute;
+      background-color: #87ceeb; /* Sky blue dropdown background */
+      min-width: 120px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-profile:hover .dropdown-profile-content {
+      display: block;
+    }
+
+    .dropdown-profile-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-profile-content a:hover {
+      background-color: #f1f1f1;
+    }
+	
+	/* New styles for the buttons */
+     .top-buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .top-buttons button {
+      background-color: #87ceeb;
+      border: none;
+      color: #fff;
+      padding: 8px 16px; /* Adjusted padding for smaller size */
+      text-decoration: none;
+      font-size: 14px; /* Slightly reduced font size */
+      cursor: pointer;
+      margin: 0 10px;
+      max-width: 150px; /* Limiting maximum width */
+    }
+
+    @media screen and (max-width: 600px) {
+      /* Center align for mobile view */
+      .top-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .top-buttons button {
+        margin-bottom: 10px; /* Adding some space between buttons in mobile view */
+      }
+    }
+	
+	/* Existing styles... */
     /* Add new styles for the post structure */
     .post {
       border: 1px solid #ccc;
@@ -39,8 +219,9 @@
     }
 
     .post-image {
-      width: 150%;
-      max-width: 250px;
+	  display: block;
+    margin: 0 auto; /* Center the image horizontally */
+      width: 300px; /* Adjust the image size */
       height: auto;
       margin-bottom: 10px;
     }
@@ -61,57 +242,98 @@
       border: 1px solid #4682b4;
       color: #fff;
     }
+	
+	.comment-section textarea {
+    width: 100%; /* Make the textarea span the full width */
+    box-sizing: border-box; /* Include padding and border in the width */
+    padding: 10px; /* Add padding for better appearance */
+    margin-bottom: 10px; /* Add some space between textarea and button */
+  }
+	
   </style>
 </head>
-<body>
-  <!-- Top navigation -->
-  <div class="top-nav">
-    <!-- Navigation buttons -->
-  </div>
 
-  <!-- Your home page content here -->
-  <div class="posts">
-    <div class="post">
-      <div class="post-header">
-        <img src="shamlogo.png" alt="Profile Picture">
-        <div class="profile-info">
-          <span>Name of the Person</span>
-          <span>Date</span>
-        </div>
-		
-      </div>
-	  <div class="post-content">
-        <p>Post content goes here...</p>
-      </div>
-      <img class="post-image" src="imageone.png" alt="Uploaded Image">
-      
-      <div class="post-actions">
-        <button onclick="likePost(1)">Like</button>
-        <button onclick="commentPost(1)">Comment</button>
-        <button onclick="sharePost(1)">Share</button>
+<body>
+  <!-- Navigation bar at the top -->
+  <div class="top-nav">
+    <button onclick="location.href='home.html'">HOME</button>
+    <button onclick="location.href='save.html'">SAVE</button>
+    <button onclick="location.href='earn.html'">EARN</button>
+    <button onclick="location.href='invest.html'">INVEST</button>
+  </div>
+  
+  <!-- New post job button -->
+  <div class="top-buttons">
+    <button onclick="location.href='postjob.html'">POST JOB</button>
+  </div>
+ 
+ <!-- Job post -->
+  <div class="post">
+    <div class="post-header">
+      <img src="shamlogo.png" alt="Profile Picture">
+      <div class="profile-info">
+        <span>Mark Kabwe</span>
+        <span>02/09/2024</span>
       </div>
     </div>
-    <!-- Repeat similar structures for more posts -->
+    <div class="post-content">
+      <p>Digital Marketing Specialist: Responsible for developing, implementing, and managing marketing campaigns that promote a company's products or services online. Tasks may include creating content, managing social media accounts, analyzing data, and optimizing online advertising strategies.</p>
+    </div>
+    <img class="post-image" src="gangone.png" alt="Uploaded Image">
+    <div class="post-actions">
+      <button onclick="location.href='acceptjob.html'">Accept Job</button>
+      <button onclick="sharePost(1)">Share Job</button>
+    </div>
   </div>
+  
+  
 
   <!-- JavaScript for post interactions -->
   <script>
+    let likesCount = [0, 0]; // Counter for likes
+
     function likePost(postId) {
-      console.log(`Liked Post ${postId}`);
+      likesCount[postId - 1]++;
+      const likeElement = document.querySelector(`.post:nth-child(${postId}) .like-count`);
+      likeElement.textContent = `${likesCount[postId - 1]} Likes`;
     }
 
     function commentPost(postId) {
-      console.log(`Commented on Post ${postId}`);
+      const commentSection = document.querySelector(`.post:nth-child(${postId}) .comment-section`);
+      commentSection.style.display = "block";
     }
 
     function sharePost(postId) {
-      console.log(`Shared Post ${postId}`);
+      const postLink = window.location.href + `#post-${postId}`;
+      navigator.clipboard.writeText(postLink);
+      alert(`Post link copied to clipboard: ${postLink}`);
     }
+
+    function postComment(postId) {
+      const commentArea = document.getElementById(`commentArea${postId}`);
+      const commentText = commentArea.value;
+      const commentSection = document.querySelector(`.post:nth-child(${postId}) .comments`);
+      const commentElement = document.createElement("div");
+      commentElement.textContent = commentText;
+      commentSection.appendChild(commentElement);
+      commentArea.value = "";
+    }
+	
+	function sharePost(postId) {
+      const postLink = window.location.href + `#post-${postId}`;
+      navigator.clipboard.writeText(postLink);
+      alert(`Post link copied to clipboard: ${postLink}`);
+    }
+	
   </script>
 
   <!-- Bottom links -->
   <div class="bottom-links">
-    <!-- Bottom navigation links -->
+    <a href="contactus.html">Contact Us</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="#">Testimonies</a>
+    <a href="#">Other Services</a>
+    <a href="#">Register as a Shamloco Trader</a>
   </div>
 </body>
 </html>

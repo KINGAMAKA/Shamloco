@@ -77,179 +77,18 @@
       background-color: #f1f1f1;
     }
 
-    /* Style for posts */
-    .posts {
-      margin-top: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .post {
-      border: 1px solid #ccc;
-      padding: 10px;
-      margin-bottom: 10px;
-      width: 80%; /* Adjust width as needed */
-      background-color: #add8e6; /* Light blue post background */
-    }
-
-    .interactions {
-      display: flex;
-      justify-content: space-around;
-      width: 100%;
-      margin-top: 10px;
-    }
-
-    .interactions button {
-      flex: 1;
-      margin: 0 5px;
-      background-color: #87ceeb; /* Sky blue button background */
-      border: 1px solid #4682b4; /* Steel blue border */
-      color: #fff; /* White text color */
-    }
-
-    /* Style for bottom links */
-    .bottom-links {
-      text-align: center;
-      background-color: #87ceeb; /* Sky blue background for links */
-      padding: 10px 0;
-    }
-
-    .bottom-links a {
-      color: #fff; /* White text color */
-      margin: 0 10px;
-      text-decoration: none;
-    }
-
-    .bottom-links a:hover {
-      text-decoration: underline;
-    }
-	
-	/* Style for the dropdown */
-    .dropdown-profile {
-      position: relative;
-      display: inline-block;
-    }
-
-    .dropdown-profile-content {
-      display: none;
-      position: absolute;
-      background-color: #87ceeb; /* Sky blue dropdown background */
-      min-width: 120px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-    }
-
-    .dropdown-profile:hover .dropdown-profile-content {
-      display: block;
-    }
-
-    .dropdown-profile-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-
-    .dropdown-profile-content a:hover {
-      background-color: #f1f1f1;
-    }
-	
-	/* New styles for the buttons */
-     .top-buttons {
-      display: flex;
-      justify-content: center;
-      margin-top: 10px;
-    }
-
-    .top-buttons button {
-      background-color: #87ceeb;
-      border: none;
-      color: #fff;
-      padding: 8px 16px; /* Adjusted padding for smaller size */
-      text-decoration: none;
-      font-size: 14px; /* Slightly reduced font size */
-      cursor: pointer;
-      margin: 0 10px;
-      max-width: 150px; /* Limiting maximum width */
-    }
-
-    @media screen and (max-width: 600px) {
-      /* Center align for mobile view */
-      .top-buttons {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .top-buttons button {
-        margin-bottom: 10px; /* Adding some space between buttons in mobile view */
-      }
-    }
-	
-	/* Existing styles... */
-    /* Add new styles for the post structure */
-    .post {
-      border: 1px solid #ccc;
-      padding: 10px;
-      margin-bottom: 20px;
-      width: 80%;
-      background-color: #add8e6;
-    }
-
-    .post-header {
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-
-    .post-header img {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      margin-right: 10px;
-    }
-
-    .post-header .profile-info {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .post-header .profile-info span {
-      font-weight: bold;
-    }
-
-    .post-image {
-	  display: block;
-    margin: 0 auto; /* Center the image horizontally */
-      width: 300px; /* Adjust the image size */
+    /* Style for images */
+    .about-section img {
+      width: 100%; /* Make the images span the full width */
       height: auto;
-      margin-bottom: 10px;
+      max-width: 300px; /* Limit the maximum width */
+      display: block;
+      margin: 10px auto; /* Center the images */
     }
 
-    .post-content {
-      margin-bottom: 10px;
-    }
-
-    .post-actions {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .post-actions button {
-      flex: 1;
-      margin: 0 5px;
-      background-color: #87ceeb;
-      border: 1px solid #4682b4;
-      color: #fff;
-    }
-	
-	.comment-section textarea {
-    width: 100%; /* Make the textarea span the full width */
-    box-sizing: border-box; /* Include padding and border in the width */
-    padding: 10px; /* Add padding for better appearance */
-    margin-bottom: 10px; /* Add some space between textarea and button */
-  }
-	
+    /* Existing styles... */
+    /* Add new styles for the post structure */
+    /* ... */
   </style>
 </head>
 
@@ -262,40 +101,25 @@
     <button onclick="location.href='invest.html'">INVEST</button>
   </div>
   
-  <!-- New buttons -->
-  <div class="top-buttons">
-    <button onclick="location.href='newsaveacc.html'">CREATE NEW SAVINGS ACCOUNT</button>
-    
-  </div>
+    <!-- Main section -->
+    <main>
+        <section class="about-section">
+            <h2>About Shamloco</h2>
+            <p>Shamloco, established in 2016, was founded with a clear mission: to provide individuals with a platform to save, earn, and invest effectively. Over the years, we have strived to create opportunities that empower our users to manage their finances efficiently, offering avenues for saving their hard-earned money, exploring earning potentials, and making informed investment decisions.</p>
+            <img src="2.png" alt="Image 1"> <!-- Replace "2.png" with your image source -->
 
-  <!-- Post -->
-  <div class="posts">
-    <div class="post">
-      <div class="post-header">
-        <img src="shamlogo.png" alt="Profile Picture">
-        <div class="profile-info">
-          <span>TODAYS SAVING TIP</span>
-          <span>By Jack Mwinga</span>
-        </div>
-      </div>
-      <div class="post-content">
-        <p>One profound money-saving tip is to adopt a minimalist lifestyle. Embracing minimalism encourages you to focus on what truly matters and eliminate unnecessary expenses. It involves decluttering your life, buying intentionally, and prioritizing experiences over material possessions. By consciously evaluating your purchases and reducing unnecessary spending, you not only save money but also cultivate a greater appreciation for the things you already have.</p>
-      </div>
-      <img class="post-image" src="tip.png" alt="Uploaded Image">
-      <div class="post-actions">
-        <button onclick="location.href='acceptjob.html'">Like</button>
-        <button onclick="sharePost(1)">Share</button>
-      </div>
-    </div>
-  </div>
+            <p>At Shamloco, our dedication lies in fostering financial literacy and providing accessible tools and resources for individuals seeking to achieve their financial goals. We aim to be a trusted partner on your financial journey, offering reliable services that cater to your needs while ensuring a secure and user-friendly experience.</p>
+            <img src="1.png" alt="Image 2"> <!-- Replace "1.png" with your image source -->
 
-  <!-- Bottom links -->
-  <div class="bottom-links">
-    <a href="#">Contact Us</a>
-    <a href="#">About Us</a>
-    <a href="#">Testimonies</a>
-    <a href="#">Other Services</a>
-    <a href="#">Register as a Shamloco Trader</a>
-  </div>
+            <p>Through innovative solutions and a commitment to excellence, Shamloco continues to evolve, adapt, and grow alongside our users, shaping a future where financial stability and success are within everyone's reach.</p>
+            <img src="3.png" alt="Image 3"> <!-- Replace "3.png" with your image source -->
+        </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2023 SHAMLOCO TRADING. All rights reserved.</p>
+    </footer>
 </body>
+
 </html>

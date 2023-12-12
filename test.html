@@ -13,13 +13,14 @@
       margin: 0;
       padding: 0;
       background-color: #f0f8ff; /* Sky blue background */
+      color: #000; /* Black text color */
+      text-align: center; /* Center align text */
     }
 
     /* Welcome message at the top */
     h1 {
-      text-align: center;
       color: #87ceeb; /* Sky blue text color */
-      margin-top: 10px;
+      margin-top: 10px; /* Margin for separation */
     }
 
     /* Navigation bar at the top */
@@ -29,7 +30,6 @@
       align-items: center;
       background-color: #87ceeb; /* Sky blue navigation background */
       padding: 10px 0;
-      border-bottom: 2px solid #4682b4; /* Steel blue border */
     }
 
     .top-nav button {
@@ -48,132 +48,57 @@
       background-color: #6a5acd; /* Slate blue on hover */
     }
 
-    /* Custom image style */
-    .custom-image {
-      display: block;
-      margin: 20px auto;
-      max-width: 300px;
-      background-image: url('sky_image.jpg'); /* Replace with sky image */
-      background-size: cover;
-      width: 100%;
-      height: auto;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Buy and sell buttons */
-    .buy-sell-buttons {
+    /* New styles for the buttons */
+    .action-buttons {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
       margin-top: 20px;
     }
 
-    .buy-button {
-      background-color: #6a5acd; /* Blue */
-      color: #fff; /* White text color */
-      border-radius: 5px;
+    .action-buttons button {
+      background-color: #87ceeb;
+      border: none;
+      color: #fff;
       padding: 10px 20px;
-      margin: 10px;
+      text-decoration: none;
+      font-size: 16px;
       cursor: pointer;
-      font-weight: bold;
+      margin: 10px 0;
+      max-width: 150px;
     }
 
-    .sell-button {
-      background-color: #ffc107; /* Yellow */
-      color: #fff; /* White text color */
-      border-radius: 5px;
-      padding: 10px 20px;
-      margin: 10px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    /* Buy ShamLocos text */
-    .buy-shamlocos {
-      text-align: center;
-      margin-top: 10px;
+    /* Label for account balance */
+    .balance-label {
       font-weight: bold;
       font-size: 18px;
-    }
-
-    /* Fancy table style */
-    .fancy-table {
-      margin: 20px auto;
-      border-collapse: collapse;
-      width: 80%;
-      border: 1px solid #b8d6b2; /* Light blue border */
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .fancy-table th, .fancy-table td {
-      border: 1px solid #b8d6b2; /* Light blue border */
-      padding: 8px;
-      text-align: left;
-    
-}
-
-.fancy-table th {
-background-color: #c9e0c7; /* Lighter blue background */
-}
-
-/* Bottom links */
-.bottom-links {
-text-align: center;
-background-color: #87ceeb; /* Sky blue background */
-padding: 10px 0;
-border-top: 2px solid #4682b4; /* Steel blue border */
-}
-
-.bottom-links a {
-color: #fff; /* White text color */
-margin: 0 10px;
-text-decoration: none;
-}
-
-.bottom-links a:hover {
-text-decoration: none;
-}
-
-/* Infographics section */
-    .infographics {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
-
-    .infographic {
-      text-align: center;
-      width: 45%;
-      margin-bottom: 20px;
-      padding: 15px;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      background-color: #c9e0c7; /* Lighter blue background */
-    }
-
-    .infographic img {
-      width: 200px; /* Adjust image size */
-      height: 200px;
       margin-bottom: 10px;
+      color: black; /* Sky blue text color */
     }
 
-    .infographic h3 {
-      margin-bottom: 5px;
+    /* Bottom links */
+    .bottom-links {
+      text-align: center;
+      background-color: #87ceeb; /* Sky blue background for links */
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
     }
 
-    .infographic p {
-      font-size: 14px;
-      color: #333;
+    .bottom-links a {
+      color: #4682b4; /* Sky blue text color */
+      margin: 10px;
+      font-weight: bold;
+      text-decoration: none;
     }
 
-</style>
+    .bottom-links a:hover {
+      color: #6a5acd; /* Slate blue text color on hover */
+    }
+  </style>
 </head>
-
 <body>
+  <!-- Navigation bar at the top -->
   <div class="top-nav">
     <button onclick="location.href='home.html'">HOME</button>
     <button onclick="location.href='save.html'">SAVE</button>
@@ -181,98 +106,25 @@ text-decoration: none;
     <button onclick="location.href='invest.html'">INVEST</button>
   </div>
 
-  <div class="custom-image"></div>
+  <!-- Label for account balance -->
+  <div class="balance-label">ACCOUNT BALANCE K2,214.67</div>
 
-  <div class="buy-sell-buttons">
-    <a href="buyshamloco.html" class="btn buy-button">Buy 100.63</a>
-    <a href="sellshamloco.html" class="btn sell-button">Sell 98.04</a>
+  <!-- Action buttons -->
+  <div class="action-buttons">
+    <button onclick="location.href='mysavings.html'">MY SAVING ACCOUNTS</button>
+    <button onclick="location.href='sendmoney.html'">SEND MONEY</button>
+    <button onclick="location.href='deposit.html'">DEPOSIT</button>
+    <button onclick="location.href='withdraw.html'">WITHDRAW</button>
   </div>
 
-  <div class="buy-shamlocos">
-    Reach for the Skies with ShamLocos
-  </div>
-
-  <table class="fancy-table">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Metal</th>
-        <th>Description</th>
-        <th>Price</th>
-      </tr>
-	  <tbody>
-      <tr>
-        <td>1</td>
-        <td>GOLD</td>
-        <td>Description of Gold</td>
-        <td>1GOLD SL - K 100.63</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>COPPER</td>
-        <td>Description of Copper</td>
-        <td>1COPP SL - K50.42</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>BRONZE</td>
-        <td>Description of Bronze</td>
-        <td>1BRZN SL - K 20.13</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>SILVER</td>
-        <td>Description of Silver</td>
-        <td>1SILV SL - K 10.65</td>
-      </tr>
-      <!-- Add more rows for other metals -->
-    </tbody>
-    </thead>
-    <tbody>
-    </tbody>
-  </table>
-  
-  <!-- Infographics for Gold, Copper, Bronze, Silver -->
-  <div class="infographics">
-    <div class="infographic">
-      <img src="gold.png" alt="Gold Image">
-      <h3>GOLD</h3>
-      <p>Description of Gold</p>
-      <p>Price: 1GOLD SL - K 100.63</p>
-    </div>
-
-    <div class="infographic">
-      <img src="copper.png" alt="Copper Image">
-      <h3>COPPER</h3>
-      <p>Description of Copper</p>
-      <p>Price: 1COPP SL - K50.42</p>
-    </div>
-
-    <div class="infographic">
-      <img src="bronze.png" alt="Bronze Image">
-      <h3>BRONZE</h3>
-      <p>Description of Bronze</p>
-      <p>Price: 1BRZN SL - K 20.13</p>
-    </div>
-
-    <div class="infographic">
-      <img src="silver.png" alt="Silver Image">
-      <h3>SILVER</h3>
-      <p>Description of Silver</p>
-      <p>Price: 1SILV SL - K 10.65</p>
-    </div>
-  </div>
-  
-  
-
+  <!-- Bottom links -->
   <div class="bottom-links">
+    <a href="home.html">Home</a>
     <a href="#">Contact Us</a>
     <a href="#">About Us</a>
     <a href="#">Testimonies</a>
     <a href="#">Other Services</a>
     <a href="#">Register as a Shamloco Trader</a>
   </div>
-
 </body>
-
 </html>

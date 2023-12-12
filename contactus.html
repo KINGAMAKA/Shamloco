@@ -1,86 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="contactus.css">
-  <title>Contact Us</title>
-  <style>
-    /* Additional CSS to ensure mobile responsiveness */
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="emme.css">
+    <link rel="stylesheet" href="mobilelook.css">
+    <script src="jack.js"></script>
+    <title>Mobile App Landing Page</title>
+    <style>
+        /* Reset some default styles */
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            /* Sky blue background */
+            text-align: center; /* Center align text */
+            color: #000; /* Black text color */
+        }
 
-    /* Images set to the shamlogo */
-    img {
-      content: url('shamlogo.png');
-      width: 100px; /* Adjust the width as needed */
-      height: auto; /* Maintain aspect ratio */
-    }
+        /* Welcome message at the top */
+        h1 {
+            color: #87ceeb;
+            /* Sky blue text color */
+            margin-top: 10px;
+            /* Margin for separation */
+        }
 
-    /* Specific adjustments for contact-info */
-    .contact-info .info-item {
-      display: flex;
-      align-items: center;
-      margin: 10px;
-    }
+        /* Navigation bar at the top */
+        .top-nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #87ceeb;
+            /* Sky blue navigation background */
+            padding: 10px 0;
+        }
 
-    .contact-info .info-item img {
-      margin-right: 10px;
-    }
-  </style>
+        .top-nav button {
+            display: block;
+            background-color: #87ceeb;
+            /* Sky blue button background */
+            border: none;
+            color: #fff;
+            /* White text color */
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .top-nav button:hover {
+            background-color: #6a5acd;
+            /* Slate blue on hover */
+        }
+
+        /* Dropdown navigation */
+        .dropdown {
+            text-align: right;
+            margin-right: 10px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #87ceeb;
+            /* Sky blue dropdown background */
+            min-width: 120px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Style for posts */
+        .posts {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .post {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 80%;
+            /* Adjust width as needed */
+            background-color: #add8e6;
+            /* Light blue post background */
+        }
+
+        .interactions {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .interactions button {
+            flex: 1;
+            margin: 0 5px;
+            background-color: #87ceeb;
+            /* Sky blue button background */
+            border: 1px solid #4682b4;
+            /* Steel blue border */
+            color: #fff;
+            /* White text color */
+        }
+
+        /* Style for bottom links */
+        .bottom-links {
+            text-align: center;
+            background-color: #87ceeb;
+            /* Sky blue background for links */
+            padding: 10px 0;
+        }
+
+        .bottom-links a {
+            color: #fff;
+            /* White text color */
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .bottom-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Center everything */
+        main,
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .info-item img {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+
+        footer ul {
+            padding: 0;
+            list-style: none;
+        }
+    </style>
 </head>
+
 <body>
-  <!-- Header section -->
-  <header>
-    <img src="shamlogo.png" alt="SHAMLOCO TRADING" class="logo">
-    <nav>
-      <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contactus.html">Contact Us</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- Navigation bar at the top -->
+    <div class="top-nav">
+        <button onclick="location.href='home.html'">HOME</button>
+        <button onclick="location.href='save.html'">SAVE</button>
+        <button onclick="location.href='earn.html'">EARN</button>
+        <button onclick="location.href='invest.html'">INVEST</button>
+    </div>
 
-  <!-- Main section -->
-  <main>
-    <section class="contact-form">
-      <!-- Your existing contact form -->
-    </section>
+    <!-- Main section -->
+    <main>
+        <section class="contact-form">
+            <!-- Your existing contact form -->
+        </section>
 
-    <section class="contact-info">
-      <h2>Contact Information</h2>
-      <p>Here are some ways you can reach us:</p>
-      <div class="info-item">
-        <img src="shamlogo.png" alt="Company" class="info-icon">
-        <p>SHAMLOCO TRADING</p>
-      </div>
-      <div class="info-item">
-        <img src="shamlogo.png" alt="Email" class="info-icon">
-        <p>shamloco@example.com</p>
-      </div>
-      <div class="info-item">
-        <img src="shamlogo.png" alt="Phone" class="info-icon">
-        <p>+123-456-7890</p>
-      </div>
-      <div class="info-item">
-        <img src="shamlogo.png" alt="Manager" class="info-icon">
-        <p>Mr. Shamloco, Country Manager</p>
-      </div>
-      <div class="info-item">
-        <img src="shamlogo.png" alt="Customer" class="info-icon">
-        <p>Ms. Shamloca, Head Customer Relations</p>
-      </div>
-    </section>
-  </main>
+        <section class="contact-info">
+            <h2>Contact Information</h2>
+            <div class="info-item">
+                <img src="shamlogo.png" alt="Company" class="info-icon">
+                <h2>Trading Licence Name</h2>
+                <p>SHAMLOCO TRADING</p>
+            </div>
+            <div class="info-item">
+                <img src="31.png" alt="Email" class="info-icon">
+                <h2>Email</h2>
+                <p>shamloco@gmail.com</p>
+            </div>
+            <div class="info-item">
+                <img src="11.png" alt="Phone" class="info-icon">
+                <h2>Contact Numbers</h2>
+                <p>+260964 319 321</p>
+                <p>+260773 494 643</p>
+            </div>
+            <div class="info-item">
+                <img src="111.png" alt="Manager" class="info-icon">
+                <h2>Country Manager</h2>
+                <p>Andrew Mwansa 260 977 324 567</p>
+            </div>
+            <div class="info-item">
+                <img src="21.png" alt="Customer" class="info-icon">
+                <h2>Head Customer Relations</h2>
+                <p>Precious Mwaka Kasepa</p>
+            </div>
+        </section>
+    </main>
 
-  <!-- Footer section -->
-  <footer>
-    <ul>
-      <li><a href="terms.html">Terms of Service</a></li>
-      <li><a href="privacy.html">Privacy Policy</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-    </ul>
-    <p>&copy; 2023 SHAMLOCO TRADING. All rights reserved.</p>
-  </footer>
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2023 SHAMLOCO TRADING. All rights reserved.</p>
+    </footer>
 </body>
+
 </html>

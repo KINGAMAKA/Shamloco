@@ -19,7 +19,7 @@
     h1 {
       text-align: center;
       color: #87ceeb; /* Sky blue text color */
-      margin-top: 10px; /* Margin for separation */
+      margin-top: 10px;
     }
 
     /* Navigation bar at the top */
@@ -29,6 +29,7 @@
       align-items: center;
       background-color: #87ceeb; /* Sky blue navigation background */
       padding: 10px 0;
+      border-bottom: 2px solid #4682b4; /* Steel blue border */
     }
 
     .top-nav button {
@@ -47,293 +48,231 @@
       background-color: #6a5acd; /* Slate blue on hover */
     }
 
-    /* Dropdown navigation */
-    .dropdown {
-      text-align: right;
-      margin-right: 10px;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #87ceeb; /* Sky blue dropdown background */
-      min-width: 120px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-    }
-
-    .dropdown:hover .dropdown-content {
+    /* Custom image style */
+    .custom-image {
       display: block;
-    }
-
-    .dropdown-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #f1f1f1;
-    }
-
-    /* Style for posts */
-    .posts {
-      margin-top: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .post {
-      border: 1px solid #ccc;
-      padding: 10px;
-      margin-bottom: 10px;
-      width: 80%; /* Adjust width as needed */
-      background-color: #add8e6; /* Light blue post background */
-    }
-
-    .interactions {
-      display: flex;
-      justify-content: space-around;
+      margin: 20px auto;
+      max-width: 300px;
+      background-image: url('sky_image.jpg'); /* Replace with sky image */
+      background-size: cover;
       width: 100%;
-      margin-top: 10px;
+      height: auto;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    .interactions button {
-      flex: 1;
-      margin: 0 5px;
-      background-color: #87ceeb; /* Sky blue button background */
-      border: 1px solid #4682b4; /* Steel blue border */
-      color: #fff; /* White text color */
-    }
-
-    /* Style for bottom links */
-    .bottom-links {
-      text-align: center;
-      background-color: #87ceeb; /* Sky blue background for links */
-      padding: 10px 0;
-    }
-
-    .bottom-links a {
-      color: #fff; /* White text color */
-      margin: 0 10px;
-      text-decoration: none;
-    }
-
-    .bottom-links a:hover {
-      text-decoration: underline;
-    }
-	
-	/* Style for the dropdown */
-    .dropdown-profile {
-      position: relative;
-      display: inline-block;
-    }
-
-    .dropdown-profile-content {
-      display: none;
-      position: absolute;
-      background-color: #87ceeb; /* Sky blue dropdown background */
-      min-width: 120px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-    }
-
-    .dropdown-profile:hover .dropdown-profile-content {
-      display: block;
-    }
-
-    .dropdown-profile-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-
-    .dropdown-profile-content a:hover {
-      background-color: #f1f1f1;
-    }
-	
-	/* New styles for the buttons */
-     .top-buttons {
+    /* Buy and sell buttons */
+    .buy-sell-buttons {
       display: flex;
       justify-content: center;
-      margin-top: 10px;
-    }
-
-    .top-buttons button {
-      background-color: #87ceeb;
-      border: none;
-      color: #fff;
-      padding: 8px 16px; /* Adjusted padding for smaller size */
-      text-decoration: none;
-      font-size: 14px; /* Slightly reduced font size */
-      cursor: pointer;
-      margin: 0 10px;
-      max-width: 150px; /* Limiting maximum width */
-    }
-
-    @media screen and (max-width: 600px) {
-      /* Center align for mobile view */
-      .top-buttons {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .top-buttons button {
-        margin-bottom: 10px; /* Adding some space between buttons in mobile view */
-      }
-    }
-	
-	/* Existing styles... */
-    /* Add new styles for the post structure */
-    .post {
-      border: 1px solid #ccc;
-      padding: 10px;
-      margin-bottom: 20px;
-      width: 80%;
-      background-color: #add8e6;
-    }
-
-    .post-header {
-      display: flex;
       align-items: center;
-      margin-bottom: 10px;
+      margin-top: 20px;
     }
 
-    .post-header img {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      margin-right: 10px;
-    }
-
-    .post-header .profile-info {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .post-header .profile-info span {
+    .buy-button {
+      background-color: #6a5acd; /* Blue */
+      color: #fff; /* White text color */
+      border-radius: 5px;
+      padding: 10px 20px;
+      margin: 10px;
+      cursor: pointer;
       font-weight: bold;
     }
 
-    .post-image {
-	  display: block;
-    margin: 0 auto; /* Center the image horizontally */
-      width: 300px; /* Adjust the image size */
-      height: auto;
-      margin-bottom: 10px;
+    .sell-button {
+      background-color: #ffc107; /* Yellow */
+      color: #fff; /* White text color */
+      border-radius: 5px;
+      padding: 10px 20px;
+      margin: 10px;
+      cursor: pointer;
+      font-weight: bold;
     }
 
-    .post-content {
-      margin-bottom: 10px;
+    /* Buy ShamLocos text */
+    .buy-shamlocos {
+      text-align: center;
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 18px;
     }
 
-    .post-actions {
+    /* Fancy table style */
+    .fancy-table {
+      margin: 20px auto;
+      border-collapse: collapse;
+      width: 80%;
+      border: 1px solid #b8d6b2; /* Light blue border */
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .fancy-table th, .fancy-table td {
+      border: 1px solid #b8d6b2; /* Light blue border */
+      padding: 8px;
+      text-align: left;
+    
+}
+
+.fancy-table th {
+background-color: #c9e0c7; /* Lighter blue background */
+}
+
+/* Bottom links */
+.bottom-links {
+text-align: center;
+background-color: #87ceeb; /* Sky blue background */
+padding: 10px 0;
+border-top: 2px solid #4682b4; /* Steel blue border */
+}
+
+.bottom-links a {
+color: #fff; /* White text color */
+margin: 0 10px;
+text-decoration: none;
+}
+
+.bottom-links a:hover {
+text-decoration: none;
+}
+
+/* Infographics section */
+    .infographics {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
     }
 
-    .post-actions button {
-      flex: 1;
-      margin: 0 5px;
-      background-color: #87ceeb;
-      border: 1px solid #4682b4;
-      color: #fff;
+    .infographic {
+      text-align: center;
+      width: 45%;
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: #c9e0c7; /* Lighter blue background */
     }
-	
-	.comment-section textarea {
-    width: 100%; /* Make the textarea span the full width */
-    box-sizing: border-box; /* Include padding and border in the width */
-    padding: 10px; /* Add padding for better appearance */
-    margin-bottom: 10px; /* Add some space between textarea and button */
-  }
-	
-  </style>
+
+    .infographic img {
+      width: 200px; /* Adjust image size */
+      height: 200px;
+      margin-bottom: 10px;
+    }
+
+    .infographic h3 {
+      margin-bottom: 5px;
+    }
+
+    .infographic p {
+      font-size: 14px;
+      color: #333;
+    }
+
+</style>
 </head>
 
 <body>
-  <!-- Navigation bar at the top -->
   <div class="top-nav">
     <button onclick="location.href='home.html'">HOME</button>
     <button onclick="location.href='save.html'">SAVE</button>
     <button onclick="location.href='earn.html'">EARN</button>
     <button onclick="location.href='invest.html'">INVEST</button>
   </div>
-  
-  <!-- New post job button -->
-  <div class="top-buttons">
-    <button onclick="location.href='postjob.html'">POST JOB</button>
+
+  <div class="custom-image"></div>
+
+  <div class="buy-sell-buttons">
+    <a href="buyshamloco.html" class="btn buy-button">Buy 100.63</a>
+    <a href="sellshamloco.html" class="btn sell-button">Sell 98.04</a>
   </div>
- 
- <!-- Job post -->
-  <div class="post">
-    <div class="post-header">
-      <img src="shamlogo.png" alt="Profile Picture">
-      <div class="profile-info">
-        <span>Mark Kabwe</span>
-        <span>02/09/2024</span>
-      </div>
+
+  <div class="buy-shamlocos">
+    Reach for the Skies with ShamLocos
+  </div>
+
+  <table class="fancy-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Metal</th>
+        <th>Description</th>
+        <th>Price</th>
+      </tr>
+	  <tbody>
+      <tr>
+        <td>1</td>
+        <td>GOLD</td>
+        <td>Description of Gold</td>
+        <td>1GOLD SL - K 100.63</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>COPPER</td>
+        <td>Description of Copper</td>
+        <td>1COPP SL - K50.42</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>BRONZE</td>
+        <td>Description of Bronze</td>
+        <td>1BRZN SL - K 20.13</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>SILVER</td>
+        <td>Description of Silver</td>
+        <td>1SILV SL - K 10.65</td>
+      </tr>
+      <!-- Add more rows for other metals -->
+    </tbody>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+  
+  <!-- Infographics for Gold, Copper, Bronze, Silver -->
+  <div class="infographics">
+    <div class="infographic">
+      <img src="gold.png" alt="Gold Image">
+      <h3>GOLD</h3>
+      <p>Description of Gold</p>
+      <p>Price: 1GOLD SL - K 100.63</p>
     </div>
-    <div class="post-content">
-      <p>Digital Marketing Specialist: Responsible for developing, implementing, and managing marketing campaigns that promote a company's products or services online. Tasks may include creating content, managing social media accounts, analyzing data, and optimizing online advertising strategies.</p>
+
+    <div class="infographic">
+      <img src="copper.png" alt="Copper Image">
+      <h3>COPPER</h3>
+      <p>Description of Copper</p>
+      <p>Price: 1COPP SL - K50.42</p>
     </div>
-    <img class="post-image" src="gangone.png" alt="Uploaded Image">
-    <div class="post-actions">
-      <button onclick="location.href='acceptjob.html'">Accept Job</button>
-      <button onclick="sharePost(1)">Share Job</button>
+
+    <div class="infographic">
+      <img src="bronze.png" alt="Bronze Image">
+      <h3>BRONZE</h3>
+      <p>Description of Bronze</p>
+      <p>Price: 1BRZN SL - K 20.13</p>
+    </div>
+
+    <div class="infographic">
+      <img src="silver.png" alt="Silver Image">
+      <h3>SILVER</h3>
+      <p>Description of Silver</p>
+      <p>Price: 1SILV SL - K 10.65</p>
     </div>
   </div>
   
   
 
-  <!-- JavaScript for post interactions -->
-  <script>
-    let likesCount = [0, 0]; // Counter for likes
-
-    function likePost(postId) {
-      likesCount[postId - 1]++;
-      const likeElement = document.querySelector(`.post:nth-child(${postId}) .like-count`);
-      likeElement.textContent = `${likesCount[postId - 1]} Likes`;
-    }
-
-    function commentPost(postId) {
-      const commentSection = document.querySelector(`.post:nth-child(${postId}) .comment-section`);
-      commentSection.style.display = "block";
-    }
-
-    function sharePost(postId) {
-      const postLink = window.location.href + `#post-${postId}`;
-      navigator.clipboard.writeText(postLink);
-      alert(`Post link copied to clipboard: ${postLink}`);
-    }
-
-    function postComment(postId) {
-      const commentArea = document.getElementById(`commentArea${postId}`);
-      const commentText = commentArea.value;
-      const commentSection = document.querySelector(`.post:nth-child(${postId}) .comments`);
-      const commentElement = document.createElement("div");
-      commentElement.textContent = commentText;
-      commentSection.appendChild(commentElement);
-      commentArea.value = "";
-    }
-	
-	function sharePost(postId) {
-      const postLink = window.location.href + `#post-${postId}`;
-      navigator.clipboard.writeText(postLink);
-      alert(`Post link copied to clipboard: ${postLink}`);
-    }
-	
-  </script>
-
-  <!-- Bottom links -->
   <div class="bottom-links">
-    <a href="contactus.html">Contact Us</a>
-    <a href="aboutus.html">About Us</a>
+    <a href="#">Contact Us</a>
+    <a href="#">About Us</a>
     <a href="#">Testimonies</a>
     <a href="#">Other Services</a>
     <a href="#">Register as a Shamloco Trader</a>
   </div>
+
 </body>
+
 </html>

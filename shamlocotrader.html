@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="emme.css">
   <link rel="stylesheet" href="mobilelook.css">
   <script src="jack.js"></script>
-  <title>Mobile App Landing Page</title>
+  <title>Become A Shamloco Trader</title>
   <style>
     /* Reset some default styles */
     body, html {
@@ -262,140 +262,62 @@
     <button onclick="location.href='invest.html'">INVEST</button>
   </div>
   
-  <!-- New buttons -->
-  <div class="top-buttons">
-        <button onclick="location.href='myaccount.html'">Post Job</button>
+  <title>Shamloco Trader Application</title>
+  <style>
+    /* Additional styles specific to this page */
+    /* Add your styles here */
+    /* Adjust styles for form elements as needed */
+  </style>
+</head>
+<body>
+
+  <!-- Navigation bar at the top -->
+  <!-- Use the regular top navigator as in other pages -->
+
+  <!-- Summary of being a Shamloco Trader -->
+  <div class="summary">
+    <h2>Join Shamloco as a Trader</h2>
+    <p>To become a Shamloco trader, you need:</p>
+    <ul>
+      <li>A valid NRC</li>
+      <li>A utility bill from ZESCO</li>
+      <li>Next of kin information</li>
+      <li>A TPIN</li>
+    </ul>
   </div>
 
- <!-- Your home page content here -->
-  <div class="posts">
-    <div class="post">
-      <div class="post-header">
-        <img src="shamlogo.png" alt="Profile Picture">
-        <div class="profile-info">
-          <span>Andrew Mwila</span>
-          <span>12/03/2024</span>
-        </div>
-      </div>
-      <div class="post-content">
-        <p>Digital Marketing Specialist: Responsible for developing, implementing, and managing marketing campaigns that promote a company's products or services online. Tasks may include creating content, managing social media accounts, analyzing data, and optimizing online advertising strategies.</p>
-      </div>
-      <img class="post-image" src="111.png" alt="Uploaded Image">
-     <div class="post-actions">
-      <button onclick="location.href='acceptjob.html'">Accept Job</button>
-      <button onclick="sharePost(1)">Share Job</button>
-    </div>
-         
-    </div>
-  </div>
-  
-  <!-- Your home page content here -->
-  <div class="posts">
-    <div class="post">
-      <div class="post-header">
-        <img src="shamlogo.png" alt="Profile Picture">
-        <div class="profile-info">
-          <span>Micheal Lombe</span>
-          <span>12/03/2024</span>
-        </div>
-      </div>
-      <div class="post-content">
-        <p>Environmental Engineer: Works on projects related to environmental protection, remediation, and sustainability. Tasks include assessing environmental impact, designing solutions for waste disposal, conducting research, and ensuring compliance with regulations. </p>
-      </div>
-      <img class="post-image" src="21.png" alt="Uploaded Image">
-     <div class="post-actions">
-      <button onclick="location.href='acceptjob.html'">Accept Job</button>
-      <button onclick="sharePost(1)">Share Job</button>
-    </div>
-         
-    </div>
-  </div>
-  
-  <!-- Your home page content here -->
-  <div class="posts">
-    <div class="post">
-      <div class="post-header">
-        <img src="shamlogo.png" alt="Profile Picture">
-        <div class="profile-info">
-          <span>Kingsley Mwenya</span>
-          <span>12/03/2024</span>
-        </div>
-      </div>
-      <div class="post-content">
-        <p>Clinical Psychologist: Provides mental health assessments, therapy, and counseling services to individuals or groups. They diagnose and treat various psychological disorders, develop treatment plans, and often work in private practice, hospitals, or mental health clinics.</p>
-      </div>
-      <img class="post-image" src="31.png" alt="Uploaded Image">
-     <div class="post-actions">
-      <button onclick="location.href='acceptjob.html'">Accept Job</button>
-      <button onclick="sharePost(1)">Share Job</button>
-    </div>
-         
-    </div>
-  </div>
-  
-  <!-- Your home page content here -->
-  <div class="posts">
-    <div class="post">
-      <div class="post-header">
-        <img src="shamlogo.png" alt="Profile Picture">
-        <div class="profile-info">
-          <span>Carol Siame</span>
-          <span>12/03/2024</span>
-        </div>
-      </div>
-      <div class="post-content">
-        <p>UX/UI Designer: Focuses on enhancing user satisfaction by improving the usability, accessibility, and overall experience of digital products. Responsibilities include creating wireframes, conducting user research, designing interfaces, and collaborating with developers.</p>
-      </div>
-      <img class="post-image" src="41.png" alt="Uploaded Image">
-     <div class="post-actions">
-      <button onclick="location.href='acceptjob.html'">Accept Job</button>
-      <button onclick="sharePost(1)">Share Job</button>
-    </div>
-         
-    </div>
-  </div>
-  
- 
+  <!-- Trader application form -->
+  <form action="submit_form.php" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
 
-  <!-- JavaScript for post interactions -->
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="nrc">NRC:</label>
+    <input type="text" id="nrc" name="nrc" required>
+
+    <label for="utilityBill">ZESCO Utility Bill:</label>
+    <input type="file" id="utilityBill" name="utilityBill" accept=".pdf,.jpg,.png" required>
+
+    <label for="nextOfKin">Next of Kin:</label>
+    <input type="text" id="nextOfKin" name="nextOfKin" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="howHeard">How did you hear about Shamloco?</label>
+    <input type="text" id="howHeard" name="howHeard" required>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- JavaScript to handle form submission -->
   <script>
-    let likesCount = [0, 0]; // Counter for likes
-
-    function likePost(postId) {
-      likesCount[postId - 1]++;
-      const likeElement = document.querySelector(`.post:nth-child(${postId}) .like-count`);
-      likeElement.textContent = `${likesCount[postId - 1]} Likes`;
-    }
-
-    function commentPost(postId) {
-      const commentSection = document.querySelector(`.post:nth-child(${postId}) .comment-section`);
-      commentSection.style.display = "block";
-    }
-
-    function sharePost(postId) {
-      const postLink = window.location.href + `#post-${postId}`;
-      navigator.clipboard.writeText(postLink);
-      alert(`Post link copied to clipboard: ${postLink}`);
-    }
-
-    function postComment(postId) {
-      const commentArea = document.getElementById(`commentArea${postId}`);
-      const commentText = commentArea.value;
-      const commentSection = document.querySelector(`.post:nth-child(${postId}) .comments`);
-      const commentElement = document.createElement("div");
-      commentElement.textContent = commentText;
-      commentSection.appendChild(commentElement);
-      commentArea.value = "";
-    }
+    // Handle form submission with email sending logic
+    // Replace 'submit_form.php' with the actual script handling form submissions
+    // Add your logic to send an email to the provided email address
   </script>
 
-  <!-- Bottom links -->
-  <div class="bottom-links">
-    <a href="contactus.html">Contact Us</a>
-    <a href="aboutus.html">About Us</a>
-    <a href="#">Testimonies</a>
-    <a href="#">Other Services</a>
-    <a href="#">Register as a Shamloco Trader</a>
-  </div>
 </body>
 </html>

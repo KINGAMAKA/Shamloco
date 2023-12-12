@@ -70,12 +70,32 @@
       transform: translateY(-3px);
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
+	
+	/* Additional styles for the logo */
+    .logo-image {
+      max-width: 200px; /* Adjust the width as needed */
+      display: block;
+      margin: 0 auto 20px; /* Center and provide some space below */
+    }
+	/* Additional styles for the disclaimer message */
+    .disclaimer {
+      font-size: 12px; /* Small font size */
+      text-align: center; /* Center align */
+      margin-top: 10px; /* Space between button and disclaimer */
+      color: #666; /* Adjust the color */
+    }
+	
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Sign Up</h1>
-    <form id="signupForm">
+  
+    <!-- Image added here -->
+    <img src="shamlogo.png" alt="ShamLoco Logo" class="logo-image">
+	
+	<p class="disclaimer">Fill In The Form To Sign Up.</p>
+
+        <form id="signupForm">
       <div class="form-group">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
@@ -97,9 +117,12 @@
         <input type="text" id="nrc" name="nrc" required>
       </div>
 
-
+<!-- Disclaimer message -->
+      <p class="disclaimer">Click Sign Up If you agree to our terms and conditions.</p>
+    
+	  
       <!-- Change the button type to button -->
-      <button type="button" id="submitButton">Submit</button>
+      <button type="button" id="submitButton">Sign Up</button>
     </form>
   </div>
 

@@ -98,11 +98,21 @@
       transform: translateY(-3px);
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
+	
+	/* Additional styles for the logo */
+    .logo-image {
+      max-width: 200px; /* Adjust the width as needed */
+      display: block;
+      margin: 0 auto 20px; /* Center and provide some space below */
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Sign In</h1>
+  
+   <!-- Image added here -->
+    <img src="shamlogo.png" alt="ShamLoco Logo" class="logo-image">
+  
     <form id="signInForm">
       <div class="form-group">
         <label for="name">Name:</label>
@@ -112,7 +122,7 @@
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
       </div>
-      <a href="uniqueprofile.html" id="loginButton">Login</a>
+      <a href="home.html" id="loginButton">Login</a>
     </form>
     <div class="buttons">
       <a href="signup.html">Sign Up</a>

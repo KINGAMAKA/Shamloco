@@ -3,49 +3,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="emme.css">
-  <link rel="stylesheet" href="mobilelook.css">
-  <script src="jack.js"></script>
-  <title>Mobile App Landing Page</title>
+  <title>Social Media Template</title>
+  <!-- Styles -->
   <style>
-    /* ... (existing styles) ... */
-
-    /* New styles for the buttons */
-    .top-buttons {
-      display: flex;
-      justify-content: center;
-      margin-top: 10px;
+    /* Existing styles... */
+    /* Add new styles for the post structure */
+    .post {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 20px;
+      width: 80%;
+      background-color: #add8e6;
     }
 
-    .top-buttons button {
+    .post-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .post-header img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .post-header .profile-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .post-header .profile-info span {
+      font-weight: bold;
+    }
+
+    .post-image {
+      width: 150%;
+      max-width: 250px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .post-content {
+      margin-bottom: 10px;
+    }
+
+    .post-actions {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .post-actions button {
+      flex: 1;
+      margin: 0 5px;
       background-color: #87ceeb;
-      border: none;
+      border: 1px solid #4682b4;
       color: #fff;
-      padding: 10px 20px;
-      text-decoration: none;
-      font-size: 16px;
-      cursor: pointer;
-      margin: 0 10px;
     }
   </style>
 </head>
-
 <body>
-  <!-- Navigation bar at the top -->
+  <!-- Top navigation -->
   <div class="top-nav">
-    <button onclick="location.href='home.html'">HOME</button>
-    <button onclick="location.href='save.html'">SAVE</button>
-    <button onclick="location.href='earn.html'">EARN</button>
-    <button onclick="location.href='invest.html'">INVEST</button>
+    <!-- Navigation buttons -->
   </div>
 
-  <!-- New buttons -->
-  <div class="top-buttons">
-    <button onclick="location.href='explore.html'">EXPLORE</button>
-    <button onclick="location.href='myaccount.html'">MY ACCOUNT</button>
+  <!-- Your home page content here -->
+  <div class="posts">
+    <div class="post">
+      <div class="post-header">
+        <img src="shamlogo.png" alt="Profile Picture">
+        <div class="profile-info">
+          <span>Name of the Person</span>
+          <span>Date</span>
+        </div>
+		
+      </div>
+	  <div class="post-content">
+        <p>Post content goes here...</p>
+      </div>
+      <img class="post-image" src="imageone.png" alt="Uploaded Image">
+      
+      <div class="post-actions">
+        <button onclick="likePost(1)">Like</button>
+        <button onclick="commentPost(1)">Comment</button>
+        <button onclick="sharePost(1)">Share</button>
+      </div>
+    </div>
+    <!-- Repeat similar structures for more posts -->
   </div>
 
-  <!-- Rest of your content remains the same -->
-  <!-- ... (existing content) ... -->
+  <!-- JavaScript for post interactions -->
+  <script>
+    function likePost(postId) {
+      console.log(`Liked Post ${postId}`);
+    }
+
+    function commentPost(postId) {
+      console.log(`Commented on Post ${postId}`);
+    }
+
+    function sharePost(postId) {
+      console.log(`Shared Post ${postId}`);
+    }
+  </script>
+
+  <!-- Bottom links -->
+  <div class="bottom-links">
+    <!-- Bottom navigation links -->
+  </div>
 </body>
 </html>

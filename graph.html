@@ -3,86 +3,420 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="emme.css">
+  <link rel="stylesheet" href="mobilelook.css">
+  <script src="jack.js"></script>
   <title>Mobile App Landing Page</title>
   <style>
-    body {
+    /* Reset some default styles */
+    body, html {
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #87ceeb; /* Sky blue background */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh; /* Full viewport height */
+      background-color: #f0f8ff; /* Sky blue background */
     }
 
-    .container {
+    /* Welcome message at the top */
+    h1 {
       text-align: center;
+      color: #87ceeb; /* Sky blue text color */
+      margin-top: 10px; /* Margin for separation */
+    }
+
+    /* Navigation bar at the top */
+    .top-nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #87ceeb; /* Sky blue navigation background */
+      padding: 10px 0;
+    }
+
+    .top-nav button {
+      display: block;
+      background-color: #87ceeb; /* Sky blue button background */
+      border: none;
+      color: #fff; /* White text color */
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    .top-nav button:hover {
+      background-color: #6a5acd; /* Slate blue on hover */
+    }
+
+    /* Dropdown navigation */
+    .dropdown {
+      text-align: right;
+      margin-right: 10px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #87ceeb; /* Sky blue dropdown background */
+      min-width: 120px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    /* Style for posts */
+    .posts {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .post {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+      width: 80%; /* Adjust width as needed */
+      background-color: #add8e6; /* Light blue post background */
+    }
+
+    .interactions {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .interactions button {
+      flex: 1;
+      margin: 0 5px;
+      background-color: #87ceeb; /* Sky blue button background */
+      border: 1px solid #4682b4; /* Steel blue border */
       color: #fff; /* White text color */
     }
 
-    h1 {
-      font-size: 3em;
+    /* Style for bottom links */
+    .bottom-links {
+      text-align: center;
+      background-color: #87ceeb; /* Sky blue background for links */
+      padding: 10px 0;
+    }
+
+    .bottom-links a {
+      color: #fff; /* White text color */
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .bottom-links a:hover {
+      text-decoration: underline;
+    }
+	
+	/* Style for the dropdown */
+    .dropdown-profile {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-profile-content {
+      display: none;
+      position: absolute;
+      background-color: #87ceeb; /* Sky blue dropdown background */
+      min-width: 120px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-profile:hover .dropdown-profile-content {
+      display: block;
+    }
+
+    .dropdown-profile-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-profile-content a:hover {
+      background-color: #f1f1f1;
+    }
+	
+	/* New styles for the buttons */
+     .top-buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .top-buttons button {
+      background-color: #87ceeb;
+      border: none;
+      color: #fff;
+      padding: 8px 16px; /* Adjusted padding for smaller size */
+      text-decoration: none;
+      font-size: 14px; /* Slightly reduced font size */
+      cursor: pointer;
+      margin: 0 10px;
+      max-width: 150px; /* Limiting maximum width */
+    }
+
+    @media screen and (max-width: 600px) {
+      /* Center align for mobile view */
+      .top-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .top-buttons button {
+        margin-bottom: 10px; /* Adding some space between buttons in mobile view */
+      }
+    }
+	
+	/* Existing styles... */
+    /* Add new styles for the post structure */
+    .post {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 20px;
+      width: 80%;
+      background-color: #add8e6;
+    }
+
+    .post-header {
+      display: flex;
+      align-items: center;
       margin-bottom: 10px;
     }
 
-    p {
-      font-size: 1.5em;
-      margin-bottom: 30px;
+    .post-header img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
     }
 
-    .buttons {
+    .post-header .profile-info {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
     }
 
-    /* Fancy modern buttons */
-    button {
-      padding: 15px 30px;
-      border: none;
-      border-radius: 5px;
-      font-size: 1.2em;
-      margin: 0 10px;
-      cursor: pointer;
-      transition: all 0.3s ease;
+    .post-header .profile-info span {
+      font-weight: bold;
     }
 
-    #loginButton {
-      background-color: #4682b4; /* Steel blue */
+    .post-image {
+      width: 300px; /* Adjust the image size */
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .post-content {
+      margin-bottom: 10px;
+    }
+
+    .post-actions {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .post-actions button {
+      flex: 1;
+      margin: 0 5px;
+      background-color: #87ceeb;
+      border: 1px solid #4682b4;
       color: #fff;
-    }
-
-    #signupButton {
-      background-color: #6a5acd; /* Slate blue */
-      color: #fff;
-    }
-
-    button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 	
-	/* Additional styles for the logo */
-    .logo-image {
-      max-width: 200px; /* Adjust the width as needed */
-      display: block;
-      margin: 0 auto 20px; /* Center and provide some space below */
-    }
+	.comment-section textarea {
+    width: 100%; /* Make the textarea span the full width */
+    box-sizing: border-box; /* Include padding and border in the width */
+    padding: 10px; /* Add padding for better appearance */
+    margin-bottom: 10px; /* Add some space between textarea and button */
+  }
 	
   </style>
 </head>
-<body>
-  <div class="container">
-    <!-- Image added here -->
-    <img src="shamlogo.png" alt="ShamLoco Logo" class="logo-image">
 
-    <h1>Welcome to ShamLoco</h1>
-    <p>SAVE, EARN, INVEST!</p>
-	
-    <div class="buttons">
-      <a href="signin.html"><button id="loginButton">Login</button></a>
-      <a href="signup.html"><button id="signupButton">Sign Up</button></a>
+<body>
+  <!-- Navigation bar at the top -->
+  <div class="top-nav">
+    <button onclick="location.href='home.html'">HOME</button>
+    <button onclick="location.href='save.html'">SAVE</button>
+    <button onclick="location.href='earn.html'">EARN</button>
+    <button onclick="location.href='invest.html'">INVEST</button>
+  </div>
+  
+  <!-- New buttons -->
+  <div class="top-buttons">
+    <button onclick="location.href='explore.html'">EXPLORE</button>
+    <button onclick="location.href='myaccount.html'">MY ACCOUNT</button>
+  </div>
+
+ <!-- Your home page content here -->
+  <div class="posts">
+    <div class="post">
+      <div class="post-header">
+        <img src="shamlogo.png" alt="Profile Picture">
+        <div class="profile-info">
+          <span>Meneka Chishete</span>
+          <span>12/03/2024</span>
+        </div>
+      </div>
+      <div class="post-content">
+        <p>One of the most effective money-saving tips is creating a budget and sticking to it. Start by tracking your expenses for a month to understand where your money is going. Then, allocate specific amounts for different categories like groceries, entertainment, and bills. Always try to spend less than what you've budgeted for each category. It's a simple yet powerful way to manage your finances and save more effectively.</p>
+      </div>
+      <img class="post-image" src="gangone.png" alt="Uploaded Image">
+      <div class="post-actions">
+        <button onclick="likePost(1)">Like</button>
+                <button onclick="sharePost(1)">Share</button>
+      </div>
+      <div class="like-count">0 Likes</div>
+      <div class="comment-section">
+        <!-- Comment section markup goes here -->
+        <textarea id="commentArea1" placeholder="Write a comment..."></textarea>
+        <button onclick="postComment(1)">Post Comment</button>
+        <div class="comments"></div>
+      </div>
     </div>
+  </div>
+  
+  <!-- Your home page content here -->
+  <div class="posts">
+    <div class="post">
+      <div class="post-header">
+        <img src="shamlogo.png" alt="Profile Picture">
+        <div class="profile-info">
+          <span>Tiopa Mwale</span>
+          <span>11/03/2024</span>
+        </div>
+      </div>
+      <div class="post-content">
+        <p> Before making a purchase, especially for bigger items like electronics or appliances, take the time to compare prices from different retailers or online stores. Look for discounts, coupons, or sales to get the best deal possible.</p>
+      </div>
+      <img class="post-image" src="gangtwo.png" alt="Uploaded Image">
+      <div class="post-actions">
+        <button onclick="likePost(1)">Like</button>
+                <button onclick="sharePost(1)">Share</button>
+      </div>
+      <div class="like-count">0 Likes</div>
+      <div class="comment-section">
+        <!-- Comment section markup goes here -->
+        <textarea id="commentArea1" placeholder="Write a comment..."></textarea>
+        <button onclick="postComment(1)">Post Comment</button>
+        <div class="comments"></div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Your home page content here -->
+  <div class="posts">
+    <div class="post">
+      <div class="post-header">
+        <img src="shamlogo.png" alt="Profile Picture">
+        <div class="profile-info">
+          <span>ALEX SENDO</span>
+          <span>12/03/2024</span>
+        </div>
+      </div>
+      <div class="post-content">
+        <p>Set up an automatic transfer from your checking account to your savings account on a regular basis, like every payday. This way, you're prioritizing savings without having to consciously think about it. Even a small amount adds up over time.</p>
+      </div>
+      <img class="post-image" src="gangthree.png" alt="Uploaded Image">
+      <div class="post-actions">
+        <button onclick="likePost(1)">Like</button>
+                <button onclick="sharePost(1)">Share</button>
+      </div>
+      <div class="like-count">0 Likes</div>
+      <div class="comment-section">
+        <!-- Comment section markup goes here -->
+        <textarea id="commentArea1" placeholder="Write a comment..."></textarea>
+        <button onclick="postComment(1)">Post Comment</button>
+        <div class="comments"></div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Your home page content here -->
+  <div class="posts">
+    <div class="post">
+      <div class="post-header">
+        <img src="shamlogo.png" alt="Profile Picture">
+        <div class="profile-info">
+          <span>Wilson Mhabuka</span>
+          <span>10/03/2024</span>
+        </div>
+      </div>
+      <div class="post-content">
+        <p>One of the most effective money-saving tips is creating a budget and sticking to it. Start by tracking your expenses for a month to understand where your money is going. Then, allocate specific amounts for different categories like groceries, entertainment, and bills. Always try to spend less than what you've budgeted for each category. It's a simple yet powerful way to manage your finances and save more effectively.</p>
+      </div>
+      <img class="post-image" src="gangfour.png" alt="Uploaded Image">
+      <div class="post-actions">
+        <button onclick="likePost(1)">Like</button>
+                <button onclick="sharePost(1)">Share</button>
+      </div>
+      <div class="like-count">0 Likes</div>
+      <div class="comment-section">
+        <!-- Comment section markup goes here -->
+        <textarea id="commentArea1" placeholder="Write a comment..."></textarea>
+        <button onclick="postComment(1)">Post Comment</button>
+        <div class="comments"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript for post interactions -->
+  <script>
+    let likesCount = [0, 0]; // Counter for likes
+
+    function likePost(postId) {
+      likesCount[postId - 1]++;
+      const likeElement = document.querySelector(`.post:nth-child(${postId}) .like-count`);
+      likeElement.textContent = `${likesCount[postId - 1]} Likes`;
+    }
+
+    function commentPost(postId) {
+      const commentSection = document.querySelector(`.post:nth-child(${postId}) .comment-section`);
+      commentSection.style.display = "block";
+    }
+
+    function sharePost(postId) {
+      const postLink = window.location.href + `#post-${postId}`;
+      navigator.clipboard.writeText(postLink);
+      alert(`Post link copied to clipboard: ${postLink}`);
+    }
+
+    function postComment(postId) {
+      const commentArea = document.getElementById(`commentArea${postId}`);
+      const commentText = commentArea.value;
+      const commentSection = document.querySelector(`.post:nth-child(${postId}) .comments`);
+      const commentElement = document.createElement("div");
+      commentElement.textContent = commentText;
+      commentSection.appendChild(commentElement);
+      commentArea.value = "";
+    }
+  </script>
+
+  <!-- Bottom links -->
+  <div class="bottom-links">
+    <a href="contactus.html">Contact Us</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="#">Testimonies</a>
+    <a href="#">Other Services</a>
+    <a href="#">Register as a Shamloco Trader</a>
   </div>
 </body>
 </html>

@@ -1,0 +1,38 @@
+<NotepadPlus>
+    <Session activeView="0">
+        <mainView activeIndex="17">
+            <File firstVisibleLine="43" xOffset="0" scrollWidth="592" startPos="1691" endPos="0" selMode="0" lang="HTML" encoding="-1" filename="C:\Users\TARIQ TECH\Downloads\New folder\2bit\GDUB\index.html" />
+            <File firstVisibleLine="76" xOffset="0" scrollWidth="736" startPos="2253" endPos="2158" selMode="0" lang="HTML" encoding="-1" filename="C:\Users\TARIQ TECH\Downloads\New folder\2bit\GDUB\signup.html" />
+            <File firstVisibleLine="99" xOffset="0" scrollWidth="648" startPos="2972" endPos="2972" selMode="0" lang="HTML" encoding="-1" filename="C:\Users\TARIQ TECH\Downloads\New folder\2bit\GDUB\signin.html" />
+            <File firstVisibleLine="59" xOffset="0" scrollWidth="512" startPos="2000" endPos="2000" selMode="0" lang="CSS" encoding="-1" filename="C:\Users\TARIQ TECH\Downloads\New folder\2bit\GDUB\emme.css" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="624" startPos="0" endPos="0" selMode="0" lang="Normal Text" encoding="-1" filename="C:\Users\TARIQ TECH\Downloads\New folder\2bit\GDUB\jack.js" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="664" startPos="0" endPos="0" selMode="0" lang="Normal Text" encoding="-1" filename="C:\Users\TARIQ TECH\Downloads\New folder\2bit\GDUB\logout.js" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="264" startPos="0" endPos="0" selMode="0" lang="CSS" encoding="-1" filename="C:\Users\TARIQ TECH\Downloads\New folder\2bit\GDUB\mobilelook.css" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="656" startPos="0" endPos="0" selMode="0" lang="Normal Text" encoding="-1" filename="C:\Users\TARIQ TECH\Downloads\New folder\2bit\GDUB\profile.js" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="600" startPos="0" endPos="0" selMode="0" lang="Normal Text" encoding="-1" filename="C:\Users\TARIQ TECH\Downloads\New folder\2bit\GDUB\uniqueprofile.js" />
+            <File firstVisibleLine="220" xOffset="0" scrollWidth="664" startPos="6435" endPos="6435" selMode="0" lang="HTML" encoding="-1" filename="C:\Users\TARIQ TECH\Downloads\New folder\2bit\GDUB\home.html" />
+            <File firstVisibleLine="149" xOffset="0" scrollWidth="848" startPos="781" endPos="781" selMode="0" lang="HTML" encoding="-1" filename="C:\Users\TARIQ TECH\Downloads\New folder\2bit\GDUB\save.html" />
+            <File firstVisibleLine="192" xOffset="0" scrollWidth="688" startPos="5221" endPos="5221" selMode="0" lang="HTML" encoding="-1" filename="C:\Users\TARIQ TECH\Downloads\New folder\2bit\GDUB\earn.html" />
+            <File firstVisibleLine="99" xOffset="0" scrollWidth="1000" startPos="3205" endPos="3198" selMode="0" lang="HTML" encoding="-1" filename="C:\Users\TARIQ TECH\Downloads\New folder\2bit\GDUB\invest.html" />
+            <File firstVisibleLine="22" xOffset="0" scrollWidth="832" startPos="1605" endPos="1459" selMode="0" lang="HTML" encoding="-1" filename="C:\Users\TARIQ TECH\Downloads\New folder\2bit\GDUB\homee.html" />
+            <File firstVisibleLine="133" xOffset="0" scrollWidth="800" startPos="3571" endPos="3571" selMode="0" lang="HTML" encoding="-1" filename="C:\Users\TARIQ TECH\Downloads\New folder\2bit\GDUB\newsaveacc.html" />
+            <File firstVisibleLine="153" xOffset="0" scrollWidth="832" startPos="4406" endPos="4406" selMode="0" lang="HTML" encoding="-1" filename="C:\Users\TARIQ TECH\Downloads\New folder\2bit\GDUB\postjob.html" />
+            <File firstVisibleLine="54" xOffset="0" scrollWidth="1809" startPos="1744" endPos="1744" selMode="0" lang="HTML" encoding="-1" filename="C:\Users\TARIQ TECH\Downloads\New folder\2bit\GDUB\graph.html" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="4016" startPos="610" endPos="610" selMode="0" lang="HTML" encoding="-1" filename="C:\Users\TARIQ TECH\Downloads\New folder\2bit\GDUB\test.html" />
+            <File firstVisibleLine="83" xOffset="0" scrollWidth="848" startPos="2738" endPos="2738" selMode="0" lang="HTML" encoding="-1" filename="C:\Users\TARIQ TECH\Downloads\New folder\2bit\GDUB\myaccount.html" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="864" startPos="1377" endPos="35" selMode="0" lang="HTML" encoding="-1" filename="C:\Users\TARIQ TECH\Downloads\New folder\2bit\GDUB\sendmoney.html" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="616" startPos="1617" endPos="0" selMode="0" lang="HTML" encoding="-1" filename="C:\Users\TARIQ TECH\Downloads\New folder\2bit\GDUB\sent.html" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="696" startPos="2475" endPos="0" selMode="0" lang="HTML" encoding="-1" filename="C:\Users\TARIQ TECH\Downloads\New folder\2bit\GDUB\deposit.html" />
+            <File firstVisibleLine="28" xOffset="0" scrollWidth="616" startPos="1534" endPos="0" selMode="0" lang="HTML" encoding="-1" filename="C:\Users\TARIQ TECH\Downloads\New folder\2bit\GDUB\deposited.html" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="696" startPos="2214" endPos="2214" selMode="0" lang="HTML" encoding="-1" filename="C:\Users\TARIQ TECH\Downloads\New folder\2bit\GDUB\withdraw.html" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="616" startPos="1304" endPos="1304" selMode="0" lang="HTML" encoding="-1" filename="C:\Users\TARIQ TECH\Downloads\New folder\2bit\GDUB\withdrawsuccess.html" />
+            <File firstVisibleLine="78" xOffset="0" scrollWidth="736" startPos="3011" endPos="0" selMode="0" lang="HTML" encoding="-1" filename="C:\Users\TARIQ TECH\Downloads\New folder\2bit\GDUB\buyshamloco.html" />
+            <File firstVisibleLine="61" xOffset="0" scrollWidth="736" startPos="1552" endPos="1552" selMode="0" lang="HTML" encoding="-1" filename="C:\Users\TARIQ TECH\Downloads\New folder\2bit\GDUB\sellshamloco.html" />
+            <File firstVisibleLine="159" xOffset="0" scrollWidth="3577" startPos="5345" endPos="5345" selMode="0" lang="HTML" encoding="-1" filename="C:\Users\TARIQ TECH\Downloads\New folder\2bit\GDUB\mysavings.html" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="4016" startPos="3473" endPos="0" selMode="0" lang="HTML" encoding="-1" filename="C:\Users\TARIQ TECH\Downloads\New folder\2bit\GDUB\aboutus.html" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="2344" startPos="2480" endPos="2480" selMode="0" lang="HTML" encoding="-1" filename="C:\Users\TARIQ TECH\Downloads\New folder\2bit\GDUB\contactus.html" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="408" startPos="3536" endPos="0" selMode="0" lang="CSS" encoding="-1" filename="C:\Users\TARIQ TECH\Downloads\New folder\2bit\GDUB\contactus.css" />
+        </mainView>
+        <subView activeIndex="0" />
+    </Session>
+</NotepadPlus>
